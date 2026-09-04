@@ -1,0 +1,3 @@
+开发平台：Visual Studio 2022
+编译步骤：打开“数据可靠传输协议设计实验\源码\GBN\StopWait\StopWait.sln”或“数据可靠传输协议设计实验\源码\SR\StopWait\StopWait.sln”，运行需要修改input的绝对地址
+运行说明：将input文件放在D:\qq\模块二\模块二 RDT代码（学生用）\SR\input.txt，分别运行GBN-StopWait.exe/SR-StopWait.exe会得到window_log.txt文件，是窗口输出内容

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面 - HTTP服务器</title>
+    <!--<style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+            .feature-list li {
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+
+                .feature-list li:before {
+                    content: "✓ ";
+                    color: #4CAF50;
+                    font-weight: bold;
+                }
+
+        .nav-links {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+            .nav-links a {
+                display: inline-block;
+                margin: 0 10px;
+                padding: 10px 20px;
+                background: #667eea;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background 0.3s;
+            }
+
+                .nav-links a:hover {
+                    background: #764ba2;
+                }
+
+        .server-info {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>-->
+</head>
+<body>
+    <div class="header">
+        <h1> HTTP服务器测试页面</h1>
+        <p>计算机通信与网络实验 - Socket编程</p>
+    </div>
+
+    <div class="content">
+        <h2>功能特性展示</h2>
+        <ul class="feature-list">
+            <li>支持静态HTML文件服务</li>
+            <li>多Content-Type类型支持</li>
+            <li>实时请求日志输出</li>
+            <li>错误状态码处理（404、301等）</li>
+            <li>并发连接处理</li>
+            <li>配置文件化管理</li>
+        </ul>
+
+        <div class="server-info">
+            <h3> 服务器信息</h3>
+            <p><strong>服务器地址：</strong>127.0.0.1:5050</p>
+            <p><strong>启动时间：</strong><span id="startup-time"></span></p>
+            <p><strong>当前时间：</strong><span id="current-time"></span></p>
+        </div>
+
+        <h3> 功能测试链接</h3>
+        <div class="nav-links">
+            <a href="/">返回首页</a>
+            <a href="/moved.html">301重定向测试</a>
+            <a href="/notfound.html">404错误测试</a>
+            <a href="/image.jpg">图片文件测试</a>
+            <a href="/txt.txt">txt文件测试</a>
+        </div>
+
+        <h3> 请求信息</h3>
+        <p>查看控制台可以看到详细的请求日志：</p>
+        <ul>
+            <li>客户端IP和端口</li>
+            <li>HTTP请求方法</li>
+            <li>请求的URI</li>
+            <li>HTTP版本</li>
+            <li>服务器响应状态</li>
+        </ul>
+    </div>
+
+    <script>
+        // 显示时间信息
+        document.getElementById('startup-time').textContent = new Date().toLocaleString();
+
+        function updateTime() {
+            document.getElementById('current-time').textContent = new Date().toLocaleString();
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

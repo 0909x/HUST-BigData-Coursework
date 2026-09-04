@@ -1,0 +1,3 @@
+开发平台：Visual Studio 2022
+编译步骤：打开源码中的VerySimpleServer文件夹，运行Server.cpp
+运行说明：打开可执行码中的VerySimpleServer.exe，浏览器打开http://localhost:5050/

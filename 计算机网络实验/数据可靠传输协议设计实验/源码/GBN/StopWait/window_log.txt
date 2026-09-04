@@ -1,0 +1,2194 @@
+******模拟网络环境******：模拟网络环境初始化...
+******模拟网络环境******：模拟网络环境启动...
+发送方发送报文: seqnum = 1, acknum = -1, checksum = 29555, AAAAAAAAAAAAAAAAAAAA
+>>>>>> 发送分组1 <<<<<<
+【滑动窗口状态】base=1, nextseqnum=1, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组1]
+
+接收方正确收到按序分组: seqnum = 1, acknum = -1, checksum = 29555, AAAAAAAAAAAAAAAAAAAA
+******模拟网络环境******：向上递交给应用层数据：AAAAAAAAAAAAAAAAAAAA
+接收方发送确认报文: seqnum = -1, acknum = 1, checksum = 12850, ....................
+>>收到ACK1，开始移动窗口<<
+移动前: base=1, 窗口大小=1
+【滑动窗口状态】base=1, nextseqnum=2, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组1]
+发送方收到正确确认: seqnum = -1, acknum = 1, checksum = 12850, ....................
+移动后: base=2, 窗口大小=0
+【滑动窗口状态】base=2, nextseqnum=2, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 2, acknum = -1, checksum = 26984, BBBBBBBBBBBBBBBBBBBB
+>>>>>> 发送分组2 <<<<<<
+【滑动窗口状态】base=2, nextseqnum=2, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组2]
+
+发送方发送报文: seqnum = 3, acknum = -1, checksum = 24413, CCCCCCCCCCCCCCCCCCCC
+>>>>>> 发送分组3 <<<<<<
+【滑动窗口状态】base=2, nextseqnum=3, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组2 | 分组3]
+
+发送方发送报文: seqnum = 4, acknum = -1, checksum = 21842, DDDDDDDDDDDDDDDDDDDD
+>>>>>> 发送分组4 <<<<<<
+【滑动窗口状态】base=2, nextseqnum=4, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组2 | 分组3 | 分组4]
+
+发送方发送报文: seqnum = 5, acknum = -1, checksum = 19271, EEEEEEEEEEEEEEEEEEEE
+>>>>>> 发送分组5 <<<<<<
+【滑动窗口状态】base=2, nextseqnum=5, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组2 | 分组3 | 分组4 | 分组5]
+
+发送方发送报文: seqnum = 6, acknum = -1, checksum = 16700, FFFFFFFFFFFFFFFFFFFF
+>>>>>> 发送分组6 <<<<<<
+【滑动窗口状态】base=2, nextseqnum=6, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组2 | 分组3 | 分组4 | 分组5 | 分组6]
+
+接收方正确收到按序分组: seqnum = 2, acknum = -1, checksum = 26984, BBBBBBBBBBBBBBBBBBBB
+******模拟网络环境******：向上递交给应用层数据：BBBBBBBBBBBBBBBBBBBB
+接收方发送确认报文: seqnum = -1, acknum = 2, checksum = 12849, ....................
+接收方正确收到按序分组: seqnum = 3, acknum = -1, checksum = 24413, CCCCCCCCCCCCCCCCCCCC
+******模拟网络环境******：向上递交给应用层数据：CCCCCCCCCCCCCCCCCCCC
+接收方发送确认报文: seqnum = -1, acknum = 3, checksum = 12848, ....................
+接收方正确收到按序分组: seqnum = 4, acknum = -1, checksum = 21842, DDDDDDDDDDDDDDDDDDDD
+******模拟网络环境******：向上递交给应用层数据：DDDDDDDDDDDDDDDDDDDD
+接收方发送确认报文: seqnum = -1, acknum = 4, checksum = 12847, ....................
+>>收到ACK3，开始移动窗口<<
+移动前: base=2, 窗口大小=5
+【滑动窗口状态】base=2, nextseqnum=7, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组2 | 分组3 | 分组4 | 分组5 | 分组6]
+发送方收到正确确认: seqnum = -1, acknum = 3, checksum = 12848, ....................
+移动后: base=4, 窗口大小=3
+【滑动窗口状态】base=4, nextseqnum=7, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组4 | 分组5 | 分组6]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 5, acknum = -1, checksum = 19271, EEEEEEEEEEEEEEEEEEEE
+******模拟网络环境******：向上递交给应用层数据：EEEEEEEEEEEEEEEEEEEE
+接收方发送确认报文: seqnum = -1, acknum = 5, checksum = 12846, ....................
+>>收到ACK4，开始移动窗口<<
+移动前: base=4, 窗口大小=3
+【滑动窗口状态】base=4, nextseqnum=7, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组4 | 分组5 | 分组6]
+发送方收到正确确认: seqnum = -1, acknum = 4, checksum = 12847, ....................
+移动后: base=5, 窗口大小=2
+【滑动窗口状态】base=5, nextseqnum=7, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组5 | 分组6]
+>>窗口移动完成<<
+
+>>收到ACK5，开始移动窗口<<
+移动前: base=5, 窗口大小=2
+【滑动窗口状态】base=5, nextseqnum=7, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组5 | 分组6]
+发送方收到正确确认: seqnum = -1, acknum = 5, checksum = 12846, ....................
+移动后: base=6, 窗口大小=1
+【滑动窗口状态】base=6, nextseqnum=7, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组6]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 6, acknum = -1, checksum = 16700, FFFFFFFFFFFFFFFFFFFF
+******模拟网络环境******：向上递交给应用层数据：FFFFFFFFFFFFFFFFFFFF
+接收方发送确认报文: seqnum = -1, acknum = 6, checksum = 12845, ....................
+!!超时重传!!
+超时的分组: 6
+【滑动窗口状态】base=6, nextseqnum=7, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组6]
+超时重发: seqnum = 6, acknum = -1, checksum = 16700, FFFFFFFFFFFFFFFFFFFF
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 6, acknum = -1, checksum = 16700, FFFFFFFFFFFFFFFFFFFF
+接收方重发上次ack: seqnum = -1, acknum = 6, checksum = 12845, ....................
+>>收到ACK6，开始移动窗口<<
+移动前: base=6, 窗口大小=1
+【滑动窗口状态】base=6, nextseqnum=7, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组6]
+发送方收到正确确认: seqnum = -1, acknum = 6, checksum = 12845, ....................
+移动后: base=7, 窗口大小=0
+【滑动窗口状态】base=7, nextseqnum=7, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 7, acknum = -1, checksum = 14129, GGGGGGGGGGGGGGGGGGGG
+>>>>>> 发送分组7 <<<<<<
+【滑动窗口状态】base=7, nextseqnum=7, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组7]
+
+发送方发送报文: seqnum = 8, acknum = -1, checksum = 11558, HHHHHHHHHHHHHHHHHHHH
+>>>>>> 发送分组8 <<<<<<
+【滑动窗口状态】base=7, nextseqnum=8, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组7 | 分组8]
+
+发送方发送报文: seqnum = 9, acknum = -1, checksum = 8987, IIIIIIIIIIIIIIIIIIII
+>>>>>> 发送分组9 <<<<<<
+【滑动窗口状态】base=7, nextseqnum=9, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组7 | 分组8 | 分组9]
+
+发送方发送报文: seqnum = 10, acknum = -1, checksum = 6416, JJJJJJJJJJJJJJJJJJJJ
+>>>>>> 发送分组10 <<<<<<
+【滑动窗口状态】base=7, nextseqnum=10, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组7 | 分组8 | 分组9 | 分组10]
+
+发送方发送报文: seqnum = 11, acknum = -1, checksum = 3845, KKKKKKKKKKKKKKKKKKKK
+>>>>>> 发送分组11 <<<<<<
+【滑动窗口状态】base=7, nextseqnum=11, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组7 | 分组8 | 分组9 | 分组10 | 分组11]
+
+接收方正确收到按序分组: seqnum = 7, acknum = -1, checksum = 14129, GGGGGGGGGGGGGGGGGGGG
+******模拟网络环境******：向上递交给应用层数据：GGGGGGGGGGGGGGGGGGGG
+接收方发送确认报文: seqnum = -1, acknum = 7, checksum = 12844, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 9, acknum = -1, checksum = 8987, JIIIIIIIIIIIIIIIIIII
+接收方重发上次ack: seqnum = -1, acknum = 7, checksum = 12844, ....................
+>>收到ACK7，开始移动窗口<<
+移动前: base=7, 窗口大小=5
+【滑动窗口状态】base=7, nextseqnum=12, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组7 | 分组8 | 分组9 | 分组10 | 分组11]
+发送方收到正确确认: seqnum = -1, acknum = 7, checksum = 12844, ....................
+移动后: base=8, 窗口大小=4
+【滑动窗口状态】base=8, nextseqnum=12, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组8 | 分组9 | 分组10 | 分组11]
+>>窗口移动完成<<
+
+ERROR：接收方未收到正确报文：失序: seqnum = 10, acknum = -1, checksum = 6416, JJJJJJJJJJJJJJJJJJJJ
+接收方重发上次ack: seqnum = -1, acknum = 7, checksum = 12844, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 11, acknum = -1, checksum = 3845, KKKKKKKKKKKKKKKKKKKK
+接收方重发上次ack: seqnum = -1, acknum = 7, checksum = 12844, ....................
+!!超时重传!!
+超时的分组: 8
+【滑动窗口状态】base=8, nextseqnum=12, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组8 | 分组9 | 分组10 | 分组11]
+超时重发: seqnum = 8, acknum = -1, checksum = 11558, HHHHHHHHHHHHHHHHHHHH
+重传完成
+
+接收方正确收到按序分组: seqnum = 8, acknum = -1, checksum = 11558, HHHHHHHHHHHHHHHHHHHH
+******模拟网络环境******：向上递交给应用层数据：HHHHHHHHHHHHHHHHHHHH
+接收方发送确认报文: seqnum = -1, acknum = 8, checksum = 12843, ....................
+>>收到ACK8，开始移动窗口<<
+移动前: base=8, 窗口大小=4
+【滑动窗口状态】base=8, nextseqnum=12, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组8 | 分组9 | 分组10 | 分组11]
+发送方收到正确确认: seqnum = -1, acknum = 8, checksum = 12843, ....................
+移动后: base=9, 窗口大小=3
+【滑动窗口状态】base=9, nextseqnum=12, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组9 | 分组10 | 分组11]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 9, acknum = -1, checksum = 8987, IIIIIIIIIIIIIIIIIIII
+******模拟网络环境******：向上递交给应用层数据：IIIIIIIIIIIIIIIIIIII
+接收方发送确认报文: seqnum = -1, acknum = 9, checksum = 12842, ....................
+>>收到ACK9，开始移动窗口<<
+移动前: base=9, 窗口大小=3
+【滑动窗口状态】base=9, nextseqnum=12, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组9 | 分组10 | 分组11]
+发送方收到正确确认: seqnum = -1, acknum = 9, checksum = 12842, ....................
+移动后: base=10, 窗口大小=2
+【滑动窗口状态】base=10, nextseqnum=12, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组10 | 分组11]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 10, acknum = -1, checksum = 6416, JJJJJJJJJJJJJJJJJJJJ
+******模拟网络环境******：向上递交给应用层数据：JJJJJJJJJJJJJJJJJJJJ
+接收方发送确认报文: seqnum = -1, acknum = 10, checksum = 12841, ....................
+接收方正确收到按序分组: seqnum = 11, acknum = -1, checksum = 3845, KKKKKKKKKKKKKKKKKKKK
+******模拟网络环境******：向上递交给应用层数据：KKKKKKKKKKKKKKKKKKKK
+接收方发送确认报文: seqnum = -1, acknum = 11, checksum = 12840, ....................
+>>收到ACK10，开始移动窗口<<
+移动前: base=10, 窗口大小=2
+【滑动窗口状态】base=10, nextseqnum=12, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组10 | 分组11]
+发送方收到正确确认: seqnum = -1, acknum = 10, checksum = 12841, ....................
+移动后: base=11, 窗口大小=1
+【滑动窗口状态】base=11, nextseqnum=12, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组11]
+>>窗口移动完成<<
+
+>>收到ACK11，开始移动窗口<<
+移动前: base=11, 窗口大小=1
+【滑动窗口状态】base=11, nextseqnum=12, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组11]
+发送方收到正确确认: seqnum = -1, acknum = 11, checksum = 12840, ....................
+移动后: base=12, 窗口大小=0
+【滑动窗口状态】base=12, nextseqnum=12, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 12, acknum = -1, checksum = 1274, LLLLLLLLLLLLLLLLLLLL
+>>>>>> 发送分组12 <<<<<<
+【滑动窗口状态】base=12, nextseqnum=12, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组12]
+
+发送方发送报文: seqnum = 13, acknum = -1, checksum = 64238, MMMMMMMMMMMMMMMMMMMM
+>>>>>> 发送分组13 <<<<<<
+【滑动窗口状态】base=12, nextseqnum=13, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组12 | 分组13]
+
+发送方发送报文: seqnum = 14, acknum = -1, checksum = 61667, NNNNNNNNNNNNNNNNNNNN
+>>>>>> 发送分组14 <<<<<<
+【滑动窗口状态】base=12, nextseqnum=14, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组12 | 分组13 | 分组14]
+
+发送方发送报文: seqnum = 15, acknum = -1, checksum = 59096, OOOOOOOOOOOOOOOOOOOO
+>>>>>> 发送分组15 <<<<<<
+【滑动窗口状态】base=12, nextseqnum=15, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组12 | 分组13 | 分组14 | 分组15]
+
+发送方发送报文: seqnum = 16, acknum = -1, checksum = 56525, PPPPPPPPPPPPPPPPPPPP
+>>>>>> 发送分组16 <<<<<<
+【滑动窗口状态】base=12, nextseqnum=16, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组12 | 分组13 | 分组14 | 分组15 | 分组16]
+
+接收方正确收到按序分组: seqnum = 12, acknum = -1, checksum = 1274, LLLLLLLLLLLLLLLLLLLL
+******模拟网络环境******：向上递交给应用层数据：LLLLLLLLLLLLLLLLLLLL
+接收方发送确认报文: seqnum = -1, acknum = 12, checksum = 12839, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 14, acknum = -1, checksum = 61667, NNNNNNNNNNNNNNNNNNNN
+接收方重发上次ack: seqnum = -1, acknum = 12, checksum = 12839, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 16, acknum = -1, checksum = 56525, PPPPPPPPPPPPPPPPPPPP
+接收方重发上次ack: seqnum = -1, acknum = 12, checksum = 12839, ....................
+>>收到ACK12，开始移动窗口<<
+移动前: base=12, 窗口大小=5
+【滑动窗口状态】base=12, nextseqnum=17, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组12 | 分组13 | 分组14 | 分组15 | 分组16]
+发送方收到正确确认: seqnum = -1, acknum = 12, checksum = 12839, ....................
+移动后: base=13, 窗口大小=4
+【滑动窗口状态】base=13, nextseqnum=17, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组13 | 分组14 | 分组15 | 分组16]
+>>窗口移动完成<<
+
+!!超时重传!!
+超时的分组: 13
+【滑动窗口状态】base=13, nextseqnum=17, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组13 | 分组14 | 分组15 | 分组16]
+超时重发: seqnum = 13, acknum = -1, checksum = 64238, MMMMMMMMMMMMMMMMMMMM
+重传完成
+
+接收方正确收到按序分组: seqnum = 13, acknum = -1, checksum = 64238, MMMMMMMMMMMMMMMMMMMM
+******模拟网络环境******：向上递交给应用层数据：MMMMMMMMMMMMMMMMMMMM
+接收方发送确认报文: seqnum = -1, acknum = 13, checksum = 12838, ....................
+>>收到ACK13，开始移动窗口<<
+移动前: base=13, 窗口大小=4
+【滑动窗口状态】base=13, nextseqnum=17, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组13 | 分组14 | 分组15 | 分组16]
+发送方收到正确确认: seqnum = -1, acknum = 13, checksum = 12838, ....................
+移动后: base=14, 窗口大小=3
+【滑动窗口状态】base=14, nextseqnum=17, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组14 | 分组15 | 分组16]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 14, acknum = -1, checksum = 61667, NNNNNNNNNNNNNNNNNNNN
+******模拟网络环境******：向上递交给应用层数据：NNNNNNNNNNNNNNNNNNNN
+接收方发送确认报文: seqnum = -1, acknum = 14, checksum = 12837, ....................
+>>收到ACK14，开始移动窗口<<
+移动前: base=14, 窗口大小=3
+【滑动窗口状态】base=14, nextseqnum=17, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组14 | 分组15 | 分组16]
+发送方收到正确确认: seqnum = -1, acknum = 14, checksum = 12837, ....................
+移动后: base=15, 窗口大小=2
+【滑动窗口状态】base=15, nextseqnum=17, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组15 | 分组16]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 15, acknum = -1, checksum = 59096, OOOOOOOOOOOOOOOOOOOO
+******模拟网络环境******：向上递交给应用层数据：OOOOOOOOOOOOOOOOOOOO
+接收方发送确认报文: seqnum = -1, acknum = 15, checksum = 12836, ....................
+接收方正确收到按序分组: seqnum = 16, acknum = -1, checksum = 56525, PPPPPPPPPPPPPPPPPPPP
+******模拟网络环境******：向上递交给应用层数据：PPPPPPPPPPPPPPPPPPPP
+接收方发送确认报文: seqnum = -1, acknum = 16, checksum = 12835, ....................
+!!超时重传!!
+超时的分组: 15
+【滑动窗口状态】base=15, nextseqnum=17, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组15 | 分组16]
+超时重发: seqnum = 15, acknum = -1, checksum = 59096, OOOOOOOOOOOOOOOOOOOO
+重传完成
+
+>>收到ACK16，开始移动窗口<<
+移动前: base=15, 窗口大小=2
+【滑动窗口状态】base=15, nextseqnum=17, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组15 | 分组16]
+发送方收到正确确认: seqnum = -1, acknum = 16, checksum = 12835, ....................
+移动后: base=17, 窗口大小=0
+【滑动窗口状态】base=17, nextseqnum=17, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+ERROR：接收方未收到正确报文：失序: seqnum = 15, acknum = -1, checksum = 59096, OOOOOOOOOOOOOOOOOOOO
+接收方重发上次ack: seqnum = -1, acknum = 16, checksum = 12835, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 16, acknum = -1, checksum = 56525, PPPPPPPPPPPPPPPPPPPP
+接收方重发上次ack: seqnum = -1, acknum = 16, checksum = 12835, ....................
+发送方发送报文: seqnum = 17, acknum = -1, checksum = 53954, QQQQQQQQQQQQQQQQQQQQ
+>>>>>> 发送分组17 <<<<<<
+【滑动窗口状态】base=17, nextseqnum=17, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组17]
+
+发送方发送报文: seqnum = 18, acknum = -1, checksum = 51383, RRRRRRRRRRRRRRRRRRRR
+>>>>>> 发送分组18 <<<<<<
+【滑动窗口状态】base=17, nextseqnum=18, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组17 | 分组18]
+
+发送方发送报文: seqnum = 19, acknum = -1, checksum = 48812, SSSSSSSSSSSSSSSSSSSS
+>>>>>> 发送分组19 <<<<<<
+【滑动窗口状态】base=17, nextseqnum=19, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组17 | 分组18 | 分组19]
+
+发送方发送报文: seqnum = 20, acknum = -1, checksum = 46241, TTTTTTTTTTTTTTTTTTTT
+>>>>>> 发送分组20 <<<<<<
+【滑动窗口状态】base=17, nextseqnum=20, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组17 | 分组18 | 分组19 | 分组20]
+
+发送方发送报文: seqnum = 21, acknum = -1, checksum = 43670, UUUUUUUUUUUUUUUUUUUU
+>>>>>> 发送分组21 <<<<<<
+【滑动窗口状态】base=17, nextseqnum=21, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组17 | 分组18 | 分组19 | 分组20 | 分组21]
+
+接收方正确收到按序分组: seqnum = 17, acknum = -1, checksum = 53954, QQQQQQQQQQQQQQQQQQQQ
+******模拟网络环境******：向上递交给应用层数据：QQQQQQQQQQQQQQQQQQQQ
+接收方发送确认报文: seqnum = -1, acknum = 17, checksum = 12834, ....................
+接收方正确收到按序分组: seqnum = 18, acknum = -1, checksum = 51383, RRRRRRRRRRRRRRRRRRRR
+******模拟网络环境******：向上递交给应用层数据：RRRRRRRRRRRRRRRRRRRR
+接收方发送确认报文: seqnum = -1, acknum = 18, checksum = 12833, ....................
+>>收到ACK17，开始移动窗口<<
+移动前: base=17, 窗口大小=5
+【滑动窗口状态】base=17, nextseqnum=22, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组17 | 分组18 | 分组19 | 分组20 | 分组21]
+发送方收到正确确认: seqnum = -1, acknum = 17, checksum = 12834, ....................
+移动后: base=18, 窗口大小=4
+【滑动窗口状态】base=18, nextseqnum=22, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组18 | 分组19 | 分组20 | 分组21]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 19, acknum = -1, checksum = 48812, SSSSSSSSSSSSSSSSSSSS
+******模拟网络环境******：向上递交给应用层数据：SSSSSSSSSSSSSSSSSSSS
+接收方发送确认报文: seqnum = -1, acknum = 19, checksum = 12832, ....................
+接收方正确收到按序分组: seqnum = 20, acknum = -1, checksum = 46241, TTTTTTTTTTTTTTTTTTTT
+******模拟网络环境******：向上递交给应用层数据：TTTTTTTTTTTTTTTTTTTT
+接收方发送确认报文: seqnum = -1, acknum = 20, checksum = 12831, ....................
+>>收到ACK18，开始移动窗口<<
+移动前: base=18, 窗口大小=4
+【滑动窗口状态】base=18, nextseqnum=22, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组18 | 分组19 | 分组20 | 分组21]
+发送方收到正确确认: seqnum = -1, acknum = 18, checksum = 12833, ....................
+移动后: base=19, 窗口大小=3
+【滑动窗口状态】base=19, nextseqnum=22, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组19 | 分组20 | 分组21]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 21, acknum = -1, checksum = 43670, UUUUUUUUUUUUUUUUUUUU
+******模拟网络环境******：向上递交给应用层数据：UUUUUUUUUUUUUUUUUUUU
+接收方发送确认报文: seqnum = -1, acknum = 21, checksum = 12830, ....................
+>>收到ACK20，开始移动窗口<<
+移动前: base=19, 窗口大小=3
+【滑动窗口状态】base=19, nextseqnum=22, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组19 | 分组20 | 分组21]
+发送方收到正确确认: seqnum = -1, acknum = 20, checksum = 12831, ....................
+移动后: base=21, 窗口大小=1
+【滑动窗口状态】base=21, nextseqnum=22, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组21]
+>>窗口移动完成<<
+
+>>收到ACK21，开始移动窗口<<
+移动前: base=21, 窗口大小=1
+【滑动窗口状态】base=21, nextseqnum=22, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组21]
+发送方收到正确确认: seqnum = -1, acknum = 21, checksum = 12830, ....................
+移动后: base=22, 窗口大小=0
+【滑动窗口状态】base=22, nextseqnum=22, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 22, acknum = -1, checksum = 41099, VVVVVVVVVVVVVVVVVVVV
+>>>>>> 发送分组22 <<<<<<
+【滑动窗口状态】base=22, nextseqnum=22, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组22]
+
+发送方发送报文: seqnum = 23, acknum = -1, checksum = 38528, WWWWWWWWWWWWWWWWWWWW
+>>>>>> 发送分组23 <<<<<<
+【滑动窗口状态】base=22, nextseqnum=23, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组22 | 分组23]
+
+发送方发送报文: seqnum = 24, acknum = -1, checksum = 35957, XXXXXXXXXXXXXXXXXXXX
+>>>>>> 发送分组24 <<<<<<
+【滑动窗口状态】base=22, nextseqnum=24, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组22 | 分组23 | 分组24]
+
+发送方发送报文: seqnum = 25, acknum = -1, checksum = 33386, YYYYYYYYYYYYYYYYYYYY
+>>>>>> 发送分组25 <<<<<<
+【滑动窗口状态】base=22, nextseqnum=25, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组22 | 分组23 | 分组24 | 分组25]
+
+发送方发送报文: seqnum = 26, acknum = -1, checksum = 30815, ZZZZZZZZZZZZZZZZZZZZ
+>>>>>> 发送分组26 <<<<<<
+【滑动窗口状态】base=22, nextseqnum=26, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组22 | 分组23 | 分组24 | 分组25 | 分组26]
+
+接收方正确收到按序分组: seqnum = 22, acknum = -1, checksum = 41099, VVVVVVVVVVVVVVVVVVVV
+******模拟网络环境******：向上递交给应用层数据：VVVVVVVVVVVVVVVVVVVV
+接收方发送确认报文: seqnum = -1, acknum = 22, checksum = 12829, ....................
+>>收到ACK22，开始移动窗口<<
+移动前: base=22, 窗口大小=5
+【滑动窗口状态】base=22, nextseqnum=27, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组22 | 分组23 | 分组24 | 分组25 | 分组26]
+发送方收到正确确认: seqnum = -1, acknum = 22, checksum = 12829, ....................
+移动后: base=23, 窗口大小=4
+【滑动窗口状态】base=23, nextseqnum=27, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组23 | 分组24 | 分组25 | 分组26]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 23, acknum = -1, checksum = 38528, WWWWWWWWWWWWWWWWWWWW
+******模拟网络环境******：向上递交给应用层数据：WWWWWWWWWWWWWWWWWWWW
+接收方发送确认报文: seqnum = -1, acknum = 23, checksum = 12828, ....................
+>>收到ACK23，开始移动窗口<<
+移动前: base=23, 窗口大小=4
+【滑动窗口状态】base=23, nextseqnum=27, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组23 | 分组24 | 分组25 | 分组26]
+发送方收到正确确认: seqnum = -1, acknum = 23, checksum = 12828, ....................
+移动后: base=24, 窗口大小=3
+【滑动窗口状态】base=24, nextseqnum=27, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组24 | 分组25 | 分组26]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 24, acknum = -1, checksum = 35957, XXXXXXXXXXXXXXXXXXXX
+******模拟网络环境******：向上递交给应用层数据：XXXXXXXXXXXXXXXXXXXX
+接收方发送确认报文: seqnum = -1, acknum = 24, checksum = 12827, ....................
+>>收到ACK24，开始移动窗口<<
+移动前: base=24, 窗口大小=3
+【滑动窗口状态】base=24, nextseqnum=27, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组24 | 分组25 | 分组26]
+发送方收到正确确认: seqnum = -1, acknum = 24, checksum = 12827, ....................
+移动后: base=25, 窗口大小=2
+【滑动窗口状态】base=25, nextseqnum=27, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组25 | 分组26]
+>>窗口移动完成<<
+
+!!超时重传!!
+超时的分组: 25
+【滑动窗口状态】base=25, nextseqnum=27, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组25 | 分组26]
+超时重发: seqnum = 25, acknum = -1, checksum = 33386, YYYYYYYYYYYYYYYYYYYY
+重传完成
+
+接收方正确收到按序分组: seqnum = 25, acknum = -1, checksum = 33386, YYYYYYYYYYYYYYYYYYYY
+******模拟网络环境******：向上递交给应用层数据：YYYYYYYYYYYYYYYYYYYY
+接收方发送确认报文: seqnum = -1, acknum = 25, checksum = 12826, ....................
+>>收到ACK25，开始移动窗口<<
+移动前: base=25, 窗口大小=2
+【滑动窗口状态】base=25, nextseqnum=27, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组25 | 分组26]
+发送方收到正确确认: seqnum = -1, acknum = 25, checksum = 12826, ....................
+移动后: base=26, 窗口大小=1
+【滑动窗口状态】base=26, nextseqnum=27, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组26]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 26, acknum = -1, checksum = 30815, ZZZZZZZZZZZZZZZZZZZZ
+******模拟网络环境******：向上递交给应用层数据：ZZZZZZZZZZZZZZZZZZZZ
+接收方发送确认报文: seqnum = -1, acknum = 26, checksum = 12825, ....................
+!!超时重传!!
+超时的分组: 26
+【滑动窗口状态】base=26, nextseqnum=27, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组26]
+超时重发: seqnum = 26, acknum = -1, checksum = 30815, ZZZZZZZZZZZZZZZZZZZZ
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 26, acknum = -1, checksum = 30815, ZZZZZZZZZZZZZZZZZZZZ
+接收方重发上次ack: seqnum = -1, acknum = 26, checksum = 12825, ....................
+>>收到ACK26，开始移动窗口<<
+移动前: base=26, 窗口大小=1
+【滑动窗口状态】base=26, nextseqnum=27, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组26]
+发送方收到正确确认: seqnum = -1, acknum = 26, checksum = 12825, ....................
+移动后: base=27, 窗口大小=0
+【滑动窗口状态】base=27, nextseqnum=27, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 27, acknum = -1, checksum = 29529, AAAAAAAAAAAAAAAAAAAA
+>>>>>> 发送分组27 <<<<<<
+【滑动窗口状态】base=27, nextseqnum=27, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组27]
+
+发送方发送报文: seqnum = 28, acknum = -1, checksum = 26958, BBBBBBBBBBBBBBBBBBBB
+>>>>>> 发送分组28 <<<<<<
+【滑动窗口状态】base=27, nextseqnum=28, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组27 | 分组28]
+
+发送方发送报文: seqnum = 29, acknum = -1, checksum = 24387, CCCCCCCCCCCCCCCCCCCC
+>>>>>> 发送分组29 <<<<<<
+【滑动窗口状态】base=27, nextseqnum=29, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组27 | 分组28 | 分组29]
+
+发送方发送报文: seqnum = 30, acknum = -1, checksum = 21816, DDDDDDDDDDDDDDDDDDDD
+>>>>>> 发送分组30 <<<<<<
+【滑动窗口状态】base=27, nextseqnum=30, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组27 | 分组28 | 分组29 | 分组30]
+
+发送方发送报文: seqnum = 31, acknum = -1, checksum = 19245, EEEEEEEEEEEEEEEEEEEE
+>>>>>> 发送分组31 <<<<<<
+【滑动窗口状态】base=27, nextseqnum=31, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组27 | 分组28 | 分组29 | 分组30 | 分组31]
+
+接收方正确收到按序分组: seqnum = 27, acknum = -1, checksum = 29529, AAAAAAAAAAAAAAAAAAAA
+******模拟网络环境******：向上递交给应用层数据：AAAAAAAAAAAAAAAAAAAA
+接收方发送确认报文: seqnum = -1, acknum = 27, checksum = 12824, ....................
+接收方正确收到按序分组: seqnum = 28, acknum = -1, checksum = 26958, BBBBBBBBBBBBBBBBBBBB
+******模拟网络环境******：向上递交给应用层数据：BBBBBBBBBBBBBBBBBBBB
+接收方发送确认报文: seqnum = -1, acknum = 28, checksum = 12823, ....................
+>>收到ACK27，开始移动窗口<<
+移动前: base=27, 窗口大小=5
+【滑动窗口状态】base=27, nextseqnum=32, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组27 | 分组28 | 分组29 | 分组30 | 分组31]
+发送方收到正确确认: seqnum = -1, acknum = 27, checksum = 12824, ....................
+移动后: base=28, 窗口大小=4
+【滑动窗口状态】base=28, nextseqnum=32, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组28 | 分组29 | 分组30 | 分组31]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 29, acknum = -1, checksum = 24387, CCCCCCCCCCCCCCCCCCCC
+******模拟网络环境******：向上递交给应用层数据：CCCCCCCCCCCCCCCCCCCC
+接收方发送确认报文: seqnum = -1, acknum = 29, checksum = 12822, ....................
+>>收到ACK28，开始移动窗口<<
+移动前: base=28, 窗口大小=4
+【滑动窗口状态】base=28, nextseqnum=32, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组28 | 分组29 | 分组30 | 分组31]
+发送方收到正确确认: seqnum = -1, acknum = 28, checksum = 12823, ....................
+移动后: base=29, 窗口大小=3
+【滑动窗口状态】base=29, nextseqnum=32, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组29 | 分组30 | 分组31]
+>>窗口移动完成<<
+
+>>收到ACK29，开始移动窗口<<
+移动前: base=29, 窗口大小=3
+【滑动窗口状态】base=29, nextseqnum=32, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组29 | 分组30 | 分组31]
+发送方收到正确确认: seqnum = -1, acknum = 29, checksum = 12822, ....................
+移动后: base=30, 窗口大小=2
+【滑动窗口状态】base=30, nextseqnum=32, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组30 | 分组31]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 30, acknum = -1, checksum = 21816, DDDDDDDDDDDDDDDDDDDD
+******模拟网络环境******：向上递交给应用层数据：DDDDDDDDDDDDDDDDDDDD
+接收方发送确认报文: seqnum = -1, acknum = 30, checksum = 12821, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 31, acknum = -1, checksum = 19245, FEEEEEEEEEEEEEEEEEEE
+接收方重发上次ack: seqnum = -1, acknum = 30, checksum = 12821, ....................
+>>收到ACK30，开始移动窗口<<
+移动前: base=30, 窗口大小=2
+【滑动窗口状态】base=30, nextseqnum=32, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组30 | 分组31]
+发送方收到正确确认: seqnum = -1, acknum = 30, checksum = 12821, ....................
+移动后: base=31, 窗口大小=1
+【滑动窗口状态】base=31, nextseqnum=32, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组31]
+>>窗口移动完成<<
+
+!!超时重传!!
+超时的分组: 31
+【滑动窗口状态】base=31, nextseqnum=32, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组31]
+超时重发: seqnum = 31, acknum = -1, checksum = 19245, EEEEEEEEEEEEEEEEEEEE
+重传完成
+
+接收方正确收到按序分组: seqnum = 31, acknum = -1, checksum = 19245, EEEEEEEEEEEEEEEEEEEE
+******模拟网络环境******：向上递交给应用层数据：EEEEEEEEEEEEEEEEEEEE
+接收方发送确认报文: seqnum = -1, acknum = 31, checksum = 12820, ....................
+>>收到ACK31，开始移动窗口<<
+移动前: base=31, 窗口大小=1
+【滑动窗口状态】base=31, nextseqnum=32, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组31]
+发送方收到正确确认: seqnum = -1, acknum = 31, checksum = 12820, ....................
+移动后: base=32, 窗口大小=0
+【滑动窗口状态】base=32, nextseqnum=32, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 32, acknum = -1, checksum = 16674, FFFFFFFFFFFFFFFFFFFF
+>>>>>> 发送分组32 <<<<<<
+【滑动窗口状态】base=32, nextseqnum=32, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组32]
+
+发送方发送报文: seqnum = 33, acknum = -1, checksum = 14103, GGGGGGGGGGGGGGGGGGGG
+>>>>>> 发送分组33 <<<<<<
+【滑动窗口状态】base=32, nextseqnum=33, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组32 | 分组33]
+
+发送方发送报文: seqnum = 34, acknum = -1, checksum = 11532, HHHHHHHHHHHHHHHHHHHH
+>>>>>> 发送分组34 <<<<<<
+【滑动窗口状态】base=32, nextseqnum=34, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组32 | 分组33 | 分组34]
+
+发送方发送报文: seqnum = 35, acknum = -1, checksum = 8961, IIIIIIIIIIIIIIIIIIII
+>>>>>> 发送分组35 <<<<<<
+【滑动窗口状态】base=32, nextseqnum=35, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组32 | 分组33 | 分组34 | 分组35]
+
+接收方正确收到按序分组: seqnum = 32, acknum = -1, checksum = 16674, FFFFFFFFFFFFFFFFFFFF
+******模拟网络环境******：向上递交给应用层数据：FFFFFFFFFFFFFFFFFFFF
+接收方发送确认报文: seqnum = -1, acknum = 32, checksum = 12819, ....................
+发送方发送报文: seqnum = 36, acknum = -1, checksum = 6390, JJJJJJJJJJJJJJJJJJJJ
+>>>>>> 发送分组36 <<<<<<
+【滑动窗口状态】base=32, nextseqnum=36, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组32 | 分组33 | 分组34 | 分组35 | 分组36]
+
+接收方正确收到按序分组: seqnum = 33, acknum = -1, checksum = 14103, GGGGGGGGGGGGGGGGGGGG
+******模拟网络环境******：向上递交给应用层数据：GGGGGGGGGGGGGGGGGGGG
+接收方发送确认报文: seqnum = -1, acknum = 33, checksum = 12818, ....................
+接收方正确收到按序分组: seqnum = 34, acknum = -1, checksum = 11532, HHHHHHHHHHHHHHHHHHHH
+******模拟网络环境******：向上递交给应用层数据：HHHHHHHHHHHHHHHHHHHH
+接收方发送确认报文: seqnum = -1, acknum = 34, checksum = 12817, ....................
+接收方正确收到按序分组: seqnum = 35, acknum = -1, checksum = 8961, IIIIIIIIIIIIIIIIIIII
+******模拟网络环境******：向上递交给应用层数据：IIIIIIIIIIIIIIIIIIII
+接收方发送确认报文: seqnum = -1, acknum = 35, checksum = 12816, ....................
+>>收到ACK33，开始移动窗口<<
+移动前: base=32, 窗口大小=5
+【滑动窗口状态】base=32, nextseqnum=37, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组32 | 分组33 | 分组34 | 分组35 | 分组36]
+发送方收到正确确认: seqnum = -1, acknum = 33, checksum = 12818, ....................
+移动后: base=34, 窗口大小=3
+【滑动窗口状态】base=34, nextseqnum=37, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组34 | 分组35 | 分组36]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 36, acknum = -1, checksum = 6390, JJJJJJJJJJJJJJJJJJJJ
+******模拟网络环境******：向上递交给应用层数据：JJJJJJJJJJJJJJJJJJJJ
+接收方发送确认报文: seqnum = -1, acknum = 36, checksum = 12815, ....................
+>>收到ACK34，开始移动窗口<<
+移动前: base=34, 窗口大小=3
+【滑动窗口状态】base=34, nextseqnum=37, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组34 | 分组35 | 分组36]
+发送方收到正确确认: seqnum = -1, acknum = 34, checksum = 12817, ....................
+移动后: base=35, 窗口大小=2
+【滑动窗口状态】base=35, nextseqnum=37, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组35 | 分组36]
+>>窗口移动完成<<
+
+>>收到ACK35，开始移动窗口<<
+移动前: base=35, 窗口大小=2
+【滑动窗口状态】base=35, nextseqnum=37, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组35 | 分组36]
+发送方收到正确确认: seqnum = -1, acknum = 35, checksum = 12816, ....................
+移动后: base=36, 窗口大小=1
+【滑动窗口状态】base=36, nextseqnum=37, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组36]
+>>窗口移动完成<<
+
+>>收到ACK36，开始移动窗口<<
+移动前: base=36, 窗口大小=1
+【滑动窗口状态】base=36, nextseqnum=37, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组36]
+发送方收到正确确认: seqnum = -1, acknum = 36, checksum = 12815, ....................
+移动后: base=37, 窗口大小=0
+【滑动窗口状态】base=37, nextseqnum=37, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 37, acknum = -1, checksum = 3819, KKKKKKKKKKKKKKKKKKKK
+>>>>>> 发送分组37 <<<<<<
+【滑动窗口状态】base=37, nextseqnum=37, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组37]
+
+发送方发送报文: seqnum = 38, acknum = -1, checksum = 1248, LLLLLLLLLLLLLLLLLLLL
+>>>>>> 发送分组38 <<<<<<
+【滑动窗口状态】base=37, nextseqnum=38, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组37 | 分组38]
+
+发送方发送报文: seqnum = 39, acknum = -1, checksum = 64212, MMMMMMMMMMMMMMMMMMMM
+>>>>>> 发送分组39 <<<<<<
+【滑动窗口状态】base=37, nextseqnum=39, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组37 | 分组38 | 分组39]
+
+发送方发送报文: seqnum = 40, acknum = -1, checksum = 61641, NNNNNNNNNNNNNNNNNNNN
+>>>>>> 发送分组40 <<<<<<
+【滑动窗口状态】base=37, nextseqnum=40, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组37 | 分组38 | 分组39 | 分组40]
+
+发送方发送报文: seqnum = 41, acknum = -1, checksum = 59070, OOOOOOOOOOOOOOOOOOOO
+>>>>>> 发送分组41 <<<<<<
+【滑动窗口状态】base=37, nextseqnum=41, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组37 | 分组38 | 分组39 | 分组40 | 分组41]
+
+接收方正确收到按序分组: seqnum = 37, acknum = -1, checksum = 3819, KKKKKKKKKKKKKKKKKKKK
+******模拟网络环境******：向上递交给应用层数据：KKKKKKKKKKKKKKKKKKKK
+接收方发送确认报文: seqnum = -1, acknum = 37, checksum = 12814, ....................
+>>收到ACK37，开始移动窗口<<
+移动前: base=37, 窗口大小=5
+【滑动窗口状态】base=37, nextseqnum=42, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组37 | 分组38 | 分组39 | 分组40 | 分组41]
+发送方收到正确确认: seqnum = -1, acknum = 37, checksum = 12814, ....................
+移动后: base=38, 窗口大小=4
+【滑动窗口状态】base=38, nextseqnum=42, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组38 | 分组39 | 分组40 | 分组41]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 38, acknum = -1, checksum = 1248, LLLLLLLLLLLLLLLLLLLL
+******模拟网络环境******：向上递交给应用层数据：LLLLLLLLLLLLLLLLLLLL
+接收方发送确认报文: seqnum = -1, acknum = 38, checksum = 12813, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 39, acknum = -1, checksum = 64212, NMMMMMMMMMMMMMMMMMMM
+接收方重发上次ack: seqnum = -1, acknum = 38, checksum = 12813, ....................
+>>收到ACK38，开始移动窗口<<
+移动前: base=38, 窗口大小=4
+【滑动窗口状态】base=38, nextseqnum=42, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组38 | 分组39 | 分组40 | 分组41]
+发送方收到正确确认: seqnum = -1, acknum = 38, checksum = 12813, ....................
+移动后: base=39, 窗口大小=3
+【滑动窗口状态】base=39, nextseqnum=42, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组39 | 分组40 | 分组41]
+>>窗口移动完成<<
+
+ERROR：接收方未收到正确报文：失序: seqnum = 40, acknum = -1, checksum = 61641, NNNNNNNNNNNNNNNNNNNN
+接收方重发上次ack: seqnum = -1, acknum = 38, checksum = 12813, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 41, acknum = -1, checksum = 59070, OOOOOOOOOOOOOOOOOOOO
+接收方重发上次ack: seqnum = -1, acknum = 38, checksum = 12813, ....................
+!!超时重传!!
+超时的分组: 39
+【滑动窗口状态】base=39, nextseqnum=42, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组39 | 分组40 | 分组41]
+超时重发: seqnum = 39, acknum = -1, checksum = 64212, MMMMMMMMMMMMMMMMMMMM
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 39, acknum = -1, checksum = 64212, NMMMMMMMMMMMMMMMMMMM
+接收方重发上次ack: seqnum = -1, acknum = 38, checksum = 12813, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = -999999, acknum = -1, checksum = 61641, NNNNNNNNNNNNNNNNNNNN
+接收方重发上次ack: seqnum = -1, acknum = 38, checksum = 12813, ....................
+!!超时重传!!
+超时的分组: 39
+【滑动窗口状态】base=39, nextseqnum=42, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组39 | 分组40 | 分组41]
+超时重发: seqnum = 39, acknum = -1, checksum = 64212, MMMMMMMMMMMMMMMMMMMM
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = -999999, acknum = -1, checksum = 59070, OOOOOOOOOOOOOOOOOOOO
+接收方重发上次ack: seqnum = -1, acknum = 38, checksum = 12813, ....................
+接收方正确收到按序分组: seqnum = 39, acknum = -1, checksum = 64212, MMMMMMMMMMMMMMMMMMMM
+******模拟网络环境******：向上递交给应用层数据：MMMMMMMMMMMMMMMMMMMM
+接收方发送确认报文: seqnum = -1, acknum = 39, checksum = 12812, ....................
+接收方正确收到按序分组: seqnum = 40, acknum = -1, checksum = 61641, NNNNNNNNNNNNNNNNNNNN
+******模拟网络环境******：向上递交给应用层数据：NNNNNNNNNNNNNNNNNNNN
+接收方发送确认报文: seqnum = -1, acknum = 40, checksum = 12811, ....................
+>>收到ACK39，开始移动窗口<<
+移动前: base=39, 窗口大小=3
+【滑动窗口状态】base=39, nextseqnum=42, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组39 | 分组40 | 分组41]
+发送方收到正确确认: seqnum = -1, acknum = 39, checksum = 12812, ....................
+移动后: base=40, 窗口大小=2
+【滑动窗口状态】base=40, nextseqnum=42, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组40 | 分组41]
+>>窗口移动完成<<
+
+>>收到ACK40，开始移动窗口<<
+移动前: base=40, 窗口大小=2
+【滑动窗口状态】base=40, nextseqnum=42, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组40 | 分组41]
+发送方收到正确确认: seqnum = -1, acknum = 40, checksum = 12811, ....................
+移动后: base=41, 窗口大小=1
+【滑动窗口状态】base=41, nextseqnum=42, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组41]
+>>窗口移动完成<<
+
+!!超时重传!!
+超时的分组: 41
+【滑动窗口状态】base=41, nextseqnum=42, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组41]
+超时重发: seqnum = 41, acknum = -1, checksum = 59070, OOOOOOOOOOOOOOOOOOOO
+重传完成
+
+接收方正确收到按序分组: seqnum = 41, acknum = -1, checksum = 59070, OOOOOOOOOOOOOOOOOOOO
+******模拟网络环境******：向上递交给应用层数据：OOOOOOOOOOOOOOOOOOOO
+接收方发送确认报文: seqnum = -1, acknum = 41, checksum = 12810, ....................
+>>收到ACK41，开始移动窗口<<
+移动前: base=41, 窗口大小=1
+【滑动窗口状态】base=41, nextseqnum=42, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组41]
+发送方收到正确确认: seqnum = -1, acknum = 41, checksum = 12810, ....................
+移动后: base=42, 窗口大小=0
+【滑动窗口状态】base=42, nextseqnum=42, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 42, acknum = -1, checksum = 56499, PPPPPPPPPPPPPPPPPPPP
+>>>>>> 发送分组42 <<<<<<
+【滑动窗口状态】base=42, nextseqnum=42, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组42]
+
+发送方发送报文: seqnum = 43, acknum = -1, checksum = 53928, QQQQQQQQQQQQQQQQQQQQ
+>>>>>> 发送分组43 <<<<<<
+【滑动窗口状态】base=42, nextseqnum=43, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组42 | 分组43]
+
+发送方发送报文: seqnum = 44, acknum = -1, checksum = 51357, RRRRRRRRRRRRRRRRRRRR
+>>>>>> 发送分组44 <<<<<<
+【滑动窗口状态】base=42, nextseqnum=44, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组42 | 分组43 | 分组44]
+
+发送方发送报文: seqnum = 45, acknum = -1, checksum = 48786, SSSSSSSSSSSSSSSSSSSS
+>>>>>> 发送分组45 <<<<<<
+【滑动窗口状态】base=42, nextseqnum=45, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组42 | 分组43 | 分组44 | 分组45]
+
+发送方发送报文: seqnum = 46, acknum = -1, checksum = 46215, TTTTTTTTTTTTTTTTTTTT
+>>>>>> 发送分组46 <<<<<<
+【滑动窗口状态】base=42, nextseqnum=46, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组42 | 分组43 | 分组44 | 分组45 | 分组46]
+
+ERROR：接收方未收到正确报文：失序: seqnum = 43, acknum = -1, checksum = 53928, QQQQQQQQQQQQQQQQQQQQ
+接收方重发上次ack: seqnum = -1, acknum = 41, checksum = 12810, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 44, acknum = -1, checksum = 51357, RRRRRRRRRRRRRRRRRRRR
+接收方重发上次ack: seqnum = -1, acknum = 41, checksum = 12810, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 45, acknum = -1, checksum = 48786, TSSSSSSSSSSSSSSSSSSS
+接收方重发上次ack: seqnum = -1, acknum = 41, checksum = 12810, ....................
+!!超时重传!!
+超时的分组: 42
+【滑动窗口状态】base=42, nextseqnum=47, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组42 | 分组43 | 分组44 | 分组45 | 分组46]
+超时重发: seqnum = 42, acknum = -1, checksum = 56499, PPPPPPPPPPPPPPPPPPPP
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 46, acknum = -1, checksum = 46215, TTTTTTTTTTTTTTTTTTTT
+接收方重发上次ack: seqnum = -1, acknum = 41, checksum = 12810, ....................
+接收方正确收到按序分组: seqnum = 42, acknum = -1, checksum = 56499, PPPPPPPPPPPPPPPPPPPP
+******模拟网络环境******：向上递交给应用层数据：PPPPPPPPPPPPPPPPPPPP
+接收方发送确认报文: seqnum = -1, acknum = 42, checksum = 12809, ....................
+接收方正确收到按序分组: seqnum = 43, acknum = -1, checksum = 53928, QQQQQQQQQQQQQQQQQQQQ
+******模拟网络环境******：向上递交给应用层数据：QQQQQQQQQQQQQQQQQQQQ
+接收方发送确认报文: seqnum = -1, acknum = 43, checksum = 12808, ....................
+>>收到ACK43，开始移动窗口<<
+移动前: base=42, 窗口大小=5
+【滑动窗口状态】base=42, nextseqnum=47, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组42 | 分组43 | 分组44 | 分组45 | 分组46]
+发送方收到正确确认: seqnum = -1, acknum = 43, checksum = 12808, ....................
+移动后: base=44, 窗口大小=3
+【滑动窗口状态】base=44, nextseqnum=47, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组44 | 分组45 | 分组46]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 44, acknum = -1, checksum = 51357, RRRRRRRRRRRRRRRRRRRR
+******模拟网络环境******：向上递交给应用层数据：RRRRRRRRRRRRRRRRRRRR
+接收方发送确认报文: seqnum = -1, acknum = 44, checksum = 12807, ....................
+>>收到ACK44，开始移动窗口<<
+移动前: base=44, 窗口大小=3
+【滑动窗口状态】base=44, nextseqnum=47, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组44 | 分组45 | 分组46]
+发送方收到正确确认: seqnum = -1, acknum = 44, checksum = 12807, ....................
+移动后: base=45, 窗口大小=2
+【滑动窗口状态】base=45, nextseqnum=47, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组45 | 分组46]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 45, acknum = -1, checksum = 48786, SSSSSSSSSSSSSSSSSSSS
+******模拟网络环境******：向上递交给应用层数据：SSSSSSSSSSSSSSSSSSSS
+接收方发送确认报文: seqnum = -1, acknum = 45, checksum = 12806, ....................
+接收方正确收到按序分组: seqnum = 46, acknum = -1, checksum = 46215, TTTTTTTTTTTTTTTTTTTT
+******模拟网络环境******：向上递交给应用层数据：TTTTTTTTTTTTTTTTTTTT
+接收方发送确认报文: seqnum = -1, acknum = 46, checksum = 12805, ....................
+>>收到ACK45，开始移动窗口<<
+移动前: base=45, 窗口大小=2
+【滑动窗口状态】base=45, nextseqnum=47, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组45 | 分组46]
+发送方收到正确确认: seqnum = -1, acknum = 45, checksum = 12806, ....................
+移动后: base=46, 窗口大小=1
+【滑动窗口状态】base=46, nextseqnum=47, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组46]
+>>窗口移动完成<<
+
+>>收到ACK46，开始移动窗口<<
+移动前: base=46, 窗口大小=1
+【滑动窗口状态】base=46, nextseqnum=47, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组46]
+发送方收到正确确认: seqnum = -1, acknum = 46, checksum = 12805, ....................
+移动后: base=47, 窗口大小=0
+【滑动窗口状态】base=47, nextseqnum=47, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 47, acknum = -1, checksum = 43644, UUUUUUUUUUUUUUUUUUUU
+>>>>>> 发送分组47 <<<<<<
+【滑动窗口状态】base=47, nextseqnum=47, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组47]
+
+发送方发送报文: seqnum = 48, acknum = -1, checksum = 41073, VVVVVVVVVVVVVVVVVVVV
+>>>>>> 发送分组48 <<<<<<
+【滑动窗口状态】base=47, nextseqnum=48, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组47 | 分组48]
+
+发送方发送报文: seqnum = 49, acknum = -1, checksum = 38502, WWWWWWWWWWWWWWWWWWWW
+>>>>>> 发送分组49 <<<<<<
+【滑动窗口状态】base=47, nextseqnum=49, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组47 | 分组48 | 分组49]
+
+发送方发送报文: seqnum = 50, acknum = -1, checksum = 35931, XXXXXXXXXXXXXXXXXXXX
+>>>>>> 发送分组50 <<<<<<
+【滑动窗口状态】base=47, nextseqnum=50, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组47 | 分组48 | 分组49 | 分组50]
+
+发送方发送报文: seqnum = 51, acknum = -1, checksum = 33360, YYYYYYYYYYYYYYYYYYYY
+>>>>>> 发送分组51 <<<<<<
+【滑动窗口状态】base=47, nextseqnum=51, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组47 | 分组48 | 分组49 | 分组50 | 分组51]
+
+接收方正确收到按序分组: seqnum = 47, acknum = -1, checksum = 43644, UUUUUUUUUUUUUUUUUUUU
+******模拟网络环境******：向上递交给应用层数据：UUUUUUUUUUUUUUUUUUUU
+接收方发送确认报文: seqnum = -1, acknum = 47, checksum = 12804, ....................
+接收方正确收到按序分组: seqnum = 48, acknum = -1, checksum = 41073, VVVVVVVVVVVVVVVVVVVV
+******模拟网络环境******：向上递交给应用层数据：VVVVVVVVVVVVVVVVVVVV
+接收方发送确认报文: seqnum = -1, acknum = 48, checksum = 12803, ....................
+>>收到ACK47，开始移动窗口<<
+移动前: base=47, 窗口大小=5
+【滑动窗口状态】base=47, nextseqnum=52, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组47 | 分组48 | 分组49 | 分组50 | 分组51]
+发送方收到正确确认: seqnum = -1, acknum = 47, checksum = 12804, ....................
+移动后: base=48, 窗口大小=4
+【滑动窗口状态】base=48, nextseqnum=52, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组48 | 分组49 | 分组50 | 分组51]
+>>窗口移动完成<<
+
+>>收到ACK48，开始移动窗口<<
+移动前: base=48, 窗口大小=4
+【滑动窗口状态】base=48, nextseqnum=52, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组48 | 分组49 | 分组50 | 分组51]
+发送方收到正确确认: seqnum = -1, acknum = 48, checksum = 12803, ....................
+移动后: base=49, 窗口大小=3
+【滑动窗口状态】base=49, nextseqnum=52, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组49 | 分组50 | 分组51]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 49, acknum = -1, checksum = 38502, WWWWWWWWWWWWWWWWWWWW
+******模拟网络环境******：向上递交给应用层数据：WWWWWWWWWWWWWWWWWWWW
+接收方发送确认报文: seqnum = -1, acknum = 49, checksum = 12802, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 50, acknum = -1, checksum = 35931, YXXXXXXXXXXXXXXXXXXX
+接收方重发上次ack: seqnum = -1, acknum = 49, checksum = 12802, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 51, acknum = -1, checksum = 33360, YYYYYYYYYYYYYYYYYYYY
+接收方重发上次ack: seqnum = -1, acknum = 49, checksum = 12802, ....................
+>>收到ACK49，开始移动窗口<<
+移动前: base=49, 窗口大小=3
+【滑动窗口状态】base=49, nextseqnum=52, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组49 | 分组50 | 分组51]
+发送方收到正确确认: seqnum = -1, acknum = 49, checksum = 12802, ....................
+移动后: base=50, 窗口大小=2
+【滑动窗口状态】base=50, nextseqnum=52, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组50 | 分组51]
+>>窗口移动完成<<
+
+!!超时重传!!
+超时的分组: 50
+【滑动窗口状态】base=50, nextseqnum=52, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组50 | 分组51]
+超时重发: seqnum = 50, acknum = -1, checksum = 35931, XXXXXXXXXXXXXXXXXXXX
+重传完成
+
+接收方正确收到按序分组: seqnum = 50, acknum = -1, checksum = 35931, XXXXXXXXXXXXXXXXXXXX
+******模拟网络环境******：向上递交给应用层数据：XXXXXXXXXXXXXXXXXXXX
+接收方发送确认报文: seqnum = -1, acknum = 50, checksum = 12801, ....................
+接收方正确收到按序分组: seqnum = 51, acknum = -1, checksum = 33360, YYYYYYYYYYYYYYYYYYYY
+******模拟网络环境******：向上递交给应用层数据：YYYYYYYYYYYYYYYYYYYY
+接收方发送确认报文: seqnum = -1, acknum = 51, checksum = 12800, ....................
+>>收到ACK51，开始移动窗口<<
+移动前: base=50, 窗口大小=2
+【滑动窗口状态】base=50, nextseqnum=52, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组50 | 分组51]
+发送方收到正确确认: seqnum = -1, acknum = 51, checksum = 12800, ....................
+移动后: base=52, 窗口大小=0
+【滑动窗口状态】base=52, nextseqnum=52, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 52, acknum = -1, checksum = 30789, ZZZZZZZZZZZZZZZZZZZZ
+>>>>>> 发送分组52 <<<<<<
+【滑动窗口状态】base=52, nextseqnum=52, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组52]
+
+发送方发送报文: seqnum = 53, acknum = -1, checksum = 29503, AAAAAAAAAAAAAAAAAAAA
+>>>>>> 发送分组53 <<<<<<
+【滑动窗口状态】base=52, nextseqnum=53, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组52 | 分组53]
+
+发送方发送报文: seqnum = 54, acknum = -1, checksum = 26932, BBBBBBBBBBBBBBBBBBBB
+>>>>>> 发送分组54 <<<<<<
+【滑动窗口状态】base=52, nextseqnum=54, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组52 | 分组53 | 分组54]
+
+发送方发送报文: seqnum = 55, acknum = -1, checksum = 24361, CCCCCCCCCCCCCCCCCCCC
+>>>>>> 发送分组55 <<<<<<
+【滑动窗口状态】base=52, nextseqnum=55, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组52 | 分组53 | 分组54 | 分组55]
+
+发送方发送报文: seqnum = 56, acknum = -1, checksum = 21790, DDDDDDDDDDDDDDDDDDDD
+>>>>>> 发送分组56 <<<<<<
+【滑动窗口状态】base=52, nextseqnum=56, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组52 | 分组53 | 分组54 | 分组55 | 分组56]
+
+ERROR：接收方未收到正确报文：失序: seqnum = 52, acknum = -1, checksum = 30789, [ZZZZZZZZZZZZZZZZZZZ
+接收方重发上次ack: seqnum = -1, acknum = 51, checksum = 12800, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 53, acknum = -1, checksum = 29503, BAAAAAAAAAAAAAAAAAAA
+接收方重发上次ack: seqnum = -1, acknum = 51, checksum = 12800, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 54, acknum = -1, checksum = 26932, BBBBBBBBBBBBBBBBBBBB
+接收方重发上次ack: seqnum = -1, acknum = 51, checksum = 12800, ....................
+!!超时重传!!
+超时的分组: 52
+【滑动窗口状态】base=52, nextseqnum=57, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组52 | 分组53 | 分组54 | 分组55 | 分组56]
+超时重发: seqnum = 52, acknum = -1, checksum = 30789, ZZZZZZZZZZZZZZZZZZZZ
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 56, acknum = -1, checksum = 21790, DDDDDDDDDDDDDDDDDDDD
+接收方重发上次ack: seqnum = -1, acknum = 51, checksum = 12800, ....................
+接收方正确收到按序分组: seqnum = 52, acknum = -1, checksum = 30789, ZZZZZZZZZZZZZZZZZZZZ
+******模拟网络环境******：向上递交给应用层数据：ZZZZZZZZZZZZZZZZZZZZ
+接收方发送确认报文: seqnum = -1, acknum = 52, checksum = 12799, ....................
+接收方正确收到按序分组: seqnum = 53, acknum = -1, checksum = 29503, AAAAAAAAAAAAAAAAAAAA
+******模拟网络环境******：向上递交给应用层数据：AAAAAAAAAAAAAAAAAAAA
+接收方发送确认报文: seqnum = -1, acknum = 53, checksum = 12798, ....................
+!!超时重传!!
+超时的分组: 52
+【滑动窗口状态】base=52, nextseqnum=57, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组52 | 分组53 | 分组54 | 分组55 | 分组56]
+超时重发: seqnum = 52, acknum = -1, checksum = 30789, ZZZZZZZZZZZZZZZZZZZZ
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 55, acknum = -1, checksum = 24361, CCCCCCCCCCCCCCCCCCCC
+接收方重发上次ack: seqnum = -1, acknum = 53, checksum = 12798, ....................
+>>收到ACK52，开始移动窗口<<
+移动前: base=52, 窗口大小=5
+【滑动窗口状态】base=52, nextseqnum=57, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组52 | 分组53 | 分组54 | 分组55 | 分组56]
+发送方收到正确确认: seqnum = -1, acknum = 52, checksum = 12799, ....................
+移动后: base=53, 窗口大小=4
+【滑动窗口状态】base=53, nextseqnum=57, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组53 | 分组54 | 分组55 | 分组56]
+>>窗口移动完成<<
+
+>>收到ACK53，开始移动窗口<<
+移动前: base=53, 窗口大小=4
+【滑动窗口状态】base=53, nextseqnum=57, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组53 | 分组54 | 分组55 | 分组56]
+发送方收到正确确认: seqnum = -1, acknum = 53, checksum = 12798, ....................
+移动后: base=54, 窗口大小=3
+【滑动窗口状态】base=54, nextseqnum=57, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组54 | 分组55 | 分组56]
+>>窗口移动完成<<
+
+ERROR：接收方未收到正确报文：失序: seqnum = 56, acknum = -1, checksum = 21790, DDDDDDDDDDDDDDDDDDDD
+接收方重发上次ack: seqnum = -1, acknum = 53, checksum = 12798, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 53, acknum = -1, checksum = 29503, AAAAAAAAAAAAAAAAAAAA
+接收方重发上次ack: seqnum = -1, acknum = 53, checksum = 12798, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = -999999, acknum = -1, checksum = 26932, BBBBBBBBBBBBBBBBBBBB
+接收方重发上次ack: seqnum = -1, acknum = 53, checksum = 12798, ....................
+!!超时重传!!
+超时的分组: 54
+【滑动窗口状态】base=54, nextseqnum=57, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组54 | 分组55 | 分组56]
+超时重发: seqnum = 54, acknum = -1, checksum = 26932, BBBBBBBBBBBBBBBBBBBB
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 56, acknum = -1, checksum = 21790, DDDDDDDDDDDDDDDDDDDD
+接收方重发上次ack: seqnum = -1, acknum = 53, checksum = 12798, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 54, acknum = -1, checksum = 26932, CBBBBBBBBBBBBBBBBBBB
+接收方重发上次ack: seqnum = -1, acknum = 53, checksum = 12798, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 55, acknum = -1, checksum = 24361, CCCCCCCCCCCCCCCCCCCC
+接收方重发上次ack: seqnum = -1, acknum = 53, checksum = 12798, ....................
+!!超时重传!!
+超时的分组: 54
+【滑动窗口状态】base=54, nextseqnum=57, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组54 | 分组55 | 分组56]
+超时重发: seqnum = 54, acknum = -1, checksum = 26932, BBBBBBBBBBBBBBBBBBBB
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 56, acknum = -1, checksum = 21790, DDDDDDDDDDDDDDDDDDDD
+接收方重发上次ack: seqnum = -1, acknum = 53, checksum = 12798, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 54, acknum = -1, checksum = 26932, CBBBBBBBBBBBBBBBBBBB
+接收方重发上次ack: seqnum = -1, acknum = 53, checksum = 12798, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 55, acknum = -1, checksum = 24361, CCCCCCCCCCCCCCCCCCCC
+接收方重发上次ack: seqnum = -1, acknum = 53, checksum = 12798, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 56, acknum = -1, checksum = 21790, DDDDDDDDDDDDDDDDDDDD
+接收方重发上次ack: seqnum = -1, acknum = 53, checksum = 12798, ....................
+!!超时重传!!
+超时的分组: 54
+【滑动窗口状态】base=54, nextseqnum=57, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组54 | 分组55 | 分组56]
+超时重发: seqnum = 54, acknum = -1, checksum = 26932, BBBBBBBBBBBBBBBBBBBB
+重传完成
+
+接收方正确收到按序分组: seqnum = 54, acknum = -1, checksum = 26932, BBBBBBBBBBBBBBBBBBBB
+******模拟网络环境******：向上递交给应用层数据：BBBBBBBBBBBBBBBBBBBB
+接收方发送确认报文: seqnum = -1, acknum = 54, checksum = 12797, ....................
+>>收到ACK54，开始移动窗口<<
+移动前: base=54, 窗口大小=3
+【滑动窗口状态】base=54, nextseqnum=57, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组54 | 分组55 | 分组56]
+发送方收到正确确认: seqnum = -1, acknum = 54, checksum = 12797, ....................
+移动后: base=55, 窗口大小=2
+【滑动窗口状态】base=55, nextseqnum=57, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组55 | 分组56]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 55, acknum = -1, checksum = 24361, CCCCCCCCCCCCCCCCCCCC
+******模拟网络环境******：向上递交给应用层数据：CCCCCCCCCCCCCCCCCCCC
+接收方发送确认报文: seqnum = -1, acknum = 55, checksum = 12796, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 56, acknum = -1, checksum = 21790, EDDDDDDDDDDDDDDDDDDD
+接收方重发上次ack: seqnum = -1, acknum = 55, checksum = 12796, ....................
+>>收到ACK55，开始移动窗口<<
+移动前: base=55, 窗口大小=2
+【滑动窗口状态】base=55, nextseqnum=57, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组55 | 分组56]
+发送方收到正确确认: seqnum = -1, acknum = 55, checksum = 12796, ....................
+移动后: base=56, 窗口大小=1
+【滑动窗口状态】base=56, nextseqnum=57, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组56]
+>>窗口移动完成<<
+
+!!超时重传!!
+超时的分组: 56
+【滑动窗口状态】base=56, nextseqnum=57, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组56]
+超时重发: seqnum = 56, acknum = -1, checksum = 21790, DDDDDDDDDDDDDDDDDDDD
+重传完成
+
+接收方正确收到按序分组: seqnum = 56, acknum = -1, checksum = 21790, DDDDDDDDDDDDDDDDDDDD
+******模拟网络环境******：向上递交给应用层数据：DDDDDDDDDDDDDDDDDDDD
+接收方发送确认报文: seqnum = -1, acknum = 56, checksum = 12795, ....................
+>>收到ACK56，开始移动窗口<<
+移动前: base=56, 窗口大小=1
+【滑动窗口状态】base=56, nextseqnum=57, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组56]
+发送方收到正确确认: seqnum = -1, acknum = 56, checksum = 12795, ....................
+移动后: base=57, 窗口大小=0
+【滑动窗口状态】base=57, nextseqnum=57, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 57, acknum = -1, checksum = 19219, EEEEEEEEEEEEEEEEEEEE
+>>>>>> 发送分组57 <<<<<<
+【滑动窗口状态】base=57, nextseqnum=57, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组57]
+
+发送方发送报文: seqnum = 58, acknum = -1, checksum = 16648, FFFFFFFFFFFFFFFFFFFF
+>>>>>> 发送分组58 <<<<<<
+【滑动窗口状态】base=57, nextseqnum=58, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组57 | 分组58]
+
+发送方发送报文: seqnum = 59, acknum = -1, checksum = 14077, GGGGGGGGGGGGGGGGGGGG
+>>>>>> 发送分组59 <<<<<<
+【滑动窗口状态】base=57, nextseqnum=59, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组57 | 分组58 | 分组59]
+
+发送方发送报文: seqnum = 60, acknum = -1, checksum = 11506, HHHHHHHHHHHHHHHHHHHH
+>>>>>> 发送分组60 <<<<<<
+【滑动窗口状态】base=57, nextseqnum=60, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组57 | 分组58 | 分组59 | 分组60]
+
+发送方发送报文: seqnum = 61, acknum = -1, checksum = 8935, IIIIIIIIIIIIIIIIIIII
+>>>>>> 发送分组61 <<<<<<
+【滑动窗口状态】base=57, nextseqnum=61, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组57 | 分组58 | 分组59 | 分组60 | 分组61]
+
+ERROR：接收方未收到正确报文：失序: seqnum = 57, acknum = -1, checksum = 19219, FEEEEEEEEEEEEEEEEEEE
+接收方重发上次ack: seqnum = -1, acknum = 56, checksum = 12795, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 58, acknum = -1, checksum = 16648, FFFFFFFFFFFFFFFFFFFF
+接收方重发上次ack: seqnum = -1, acknum = 56, checksum = 12795, ....................
+!!超时重传!!
+超时的分组: 57
+【滑动窗口状态】base=57, nextseqnum=62, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组57 | 分组58 | 分组59 | 分组60 | 分组61]
+超时重发: seqnum = 57, acknum = -1, checksum = 19219, EEEEEEEEEEEEEEEEEEEE
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 59, acknum = -1, checksum = 14077, GGGGGGGGGGGGGGGGGGGG
+接收方重发上次ack: seqnum = -1, acknum = 56, checksum = 12795, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 60, acknum = -1, checksum = 11506, HHHHHHHHHHHHHHHHHHHH
+接收方重发上次ack: seqnum = -1, acknum = 56, checksum = 12795, ....................
+接收方正确收到按序分组: seqnum = 57, acknum = -1, checksum = 19219, EEEEEEEEEEEEEEEEEEEE
+******模拟网络环境******：向上递交给应用层数据：EEEEEEEEEEEEEEEEEEEE
+接收方发送确认报文: seqnum = -1, acknum = 57, checksum = 12794, ....................
+!!超时重传!!
+超时的分组: 57
+【滑动窗口状态】base=57, nextseqnum=62, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组57 | 分组58 | 分组59 | 分组60 | 分组61]
+超时重发: seqnum = 57, acknum = -1, checksum = 19219, EEEEEEEEEEEEEEEEEEEE
+重传完成
+
+接收方正确收到按序分组: seqnum = 58, acknum = -1, checksum = 16648, FFFFFFFFFFFFFFFFFFFF
+******模拟网络环境******：向上递交给应用层数据：FFFFFFFFFFFFFFFFFFFF
+接收方发送确认报文: seqnum = -1, acknum = 58, checksum = 12793, ....................
+>>收到ACK57，开始移动窗口<<
+移动前: base=57, 窗口大小=5
+【滑动窗口状态】base=57, nextseqnum=62, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组57 | 分组58 | 分组59 | 分组60 | 分组61]
+发送方收到正确确认: seqnum = -1, acknum = 57, checksum = 12794, ....................
+移动后: base=58, 窗口大小=4
+【滑动窗口状态】base=58, nextseqnum=62, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组58 | 分组59 | 分组60 | 分组61]
+>>窗口移动完成<<
+
+>>收到ACK58，开始移动窗口<<
+移动前: base=58, 窗口大小=4
+【滑动窗口状态】base=58, nextseqnum=62, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组58 | 分组59 | 分组60 | 分组61]
+发送方收到正确确认: seqnum = -1, acknum = 58, checksum = 12793, ....................
+移动后: base=59, 窗口大小=3
+【滑动窗口状态】base=59, nextseqnum=62, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组59 | 分组60 | 分组61]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 59, acknum = -1, checksum = 14077, GGGGGGGGGGGGGGGGGGGG
+******模拟网络环境******：向上递交给应用层数据：GGGGGGGGGGGGGGGGGGGG
+接收方发送确认报文: seqnum = -1, acknum = 59, checksum = 12792, ....................
+接收方正确收到按序分组: seqnum = 60, acknum = -1, checksum = 11506, HHHHHHHHHHHHHHHHHHHH
+******模拟网络环境******：向上递交给应用层数据：HHHHHHHHHHHHHHHHHHHH
+接收方发送确认报文: seqnum = -1, acknum = 60, checksum = 12791, ....................
+>>收到ACK59，开始移动窗口<<
+移动前: base=59, 窗口大小=3
+【滑动窗口状态】base=59, nextseqnum=62, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组59 | 分组60 | 分组61]
+发送方收到正确确认: seqnum = -1, acknum = 59, checksum = 12792, ....................
+移动后: base=60, 窗口大小=2
+【滑动窗口状态】base=60, nextseqnum=62, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组60 | 分组61]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 61, acknum = -1, checksum = 8935, IIIIIIIIIIIIIIIIIIII
+******模拟网络环境******：向上递交给应用层数据：IIIIIIIIIIIIIIIIIIII
+接收方发送确认报文: seqnum = -1, acknum = 61, checksum = 12790, ....................
+>>收到ACK61，开始移动窗口<<
+移动前: base=60, 窗口大小=2
+【滑动窗口状态】base=60, nextseqnum=62, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组60 | 分组61]
+发送方收到正确确认: seqnum = -1, acknum = 61, checksum = 12790, ....................
+移动后: base=62, 窗口大小=0
+【滑动窗口状态】base=62, nextseqnum=62, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+ERROR：接收方未收到正确报文：失序: seqnum = 57, acknum = -1, checksum = 19219, EEEEEEEEEEEEEEEEEEEE
+接收方重发上次ack: seqnum = -1, acknum = 61, checksum = 12790, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 58, acknum = -1, checksum = 16648, FFFFFFFFFFFFFFFFFFFF
+接收方重发上次ack: seqnum = -1, acknum = 61, checksum = 12790, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 59, acknum = -1, checksum = 14077, GGGGGGGGGGGGGGGGGGGG
+接收方重发上次ack: seqnum = -1, acknum = 61, checksum = 12790, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 60, acknum = -1, checksum = 11506, HHHHHHHHHHHHHHHHHHHH
+接收方重发上次ack: seqnum = -1, acknum = 61, checksum = 12790, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 61, acknum = -1, checksum = 8935, IIIIIIIIIIIIIIIIIIII
+接收方重发上次ack: seqnum = -1, acknum = 61, checksum = 12790, ....................
+发送方发送报文: seqnum = 62, acknum = -1, checksum = 6364, JJJJJJJJJJJJJJJJJJJJ
+>>>>>> 发送分组62 <<<<<<
+【滑动窗口状态】base=62, nextseqnum=62, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组62]
+
+发送方发送报文: seqnum = 63, acknum = -1, checksum = 3793, KKKKKKKKKKKKKKKKKKKK
+>>>>>> 发送分组63 <<<<<<
+【滑动窗口状态】base=62, nextseqnum=63, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组62 | 分组63]
+
+发送方发送报文: seqnum = 64, acknum = -1, checksum = 1222, LLLLLLLLLLLLLLLLLLLL
+>>>>>> 发送分组64 <<<<<<
+【滑动窗口状态】base=62, nextseqnum=64, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组62 | 分组63 | 分组64]
+
+发送方发送报文: seqnum = 65, acknum = -1, checksum = 64186, MMMMMMMMMMMMMMMMMMMM
+>>>>>> 发送分组65 <<<<<<
+【滑动窗口状态】base=62, nextseqnum=65, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组62 | 分组63 | 分组64 | 分组65]
+
+发送方发送报文: seqnum = 66, acknum = -1, checksum = 61615, NNNNNNNNNNNNNNNNNNNN
+>>>>>> 发送分组66 <<<<<<
+【滑动窗口状态】base=62, nextseqnum=66, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组62 | 分组63 | 分组64 | 分组65 | 分组66]
+
+ERROR：接收方未收到正确报文：失序: seqnum = 62, acknum = -1, checksum = 6364, KJJJJJJJJJJJJJJJJJJJ
+接收方重发上次ack: seqnum = -1, acknum = 61, checksum = 12790, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 63, acknum = -1, checksum = 3793, KKKKKKKKKKKKKKKKKKKK
+接收方重发上次ack: seqnum = -1, acknum = 61, checksum = 12790, ....................
+!!超时重传!!
+超时的分组: 62
+【滑动窗口状态】base=62, nextseqnum=67, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组62 | 分组63 | 分组64 | 分组65 | 分组66]
+超时重发: seqnum = 62, acknum = -1, checksum = 6364, JJJJJJJJJJJJJJJJJJJJ
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 64, acknum = -1, checksum = 1222, LLLLLLLLLLLLLLLLLLLL
+接收方重发上次ack: seqnum = -1, acknum = 61, checksum = 12790, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 66, acknum = -1, checksum = 61615, NNNNNNNNNNNNNNNNNNNN
+接收方重发上次ack: seqnum = -1, acknum = 61, checksum = 12790, ....................
+接收方正确收到按序分组: seqnum = 62, acknum = -1, checksum = 6364, JJJJJJJJJJJJJJJJJJJJ
+******模拟网络环境******：向上递交给应用层数据：JJJJJJJJJJJJJJJJJJJJ
+接收方发送确认报文: seqnum = -1, acknum = 62, checksum = 12789, ....................
+!!超时重传!!
+超时的分组: 62
+【滑动窗口状态】base=62, nextseqnum=67, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组62 | 分组63 | 分组64 | 分组65 | 分组66]
+超时重发: seqnum = 62, acknum = -1, checksum = 6364, JJJJJJJJJJJJJJJJJJJJ
+重传完成
+
+>>收到ACK62，开始移动窗口<<
+移动前: base=62, 窗口大小=5
+【滑动窗口状态】base=62, nextseqnum=67, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组62 | 分组63 | 分组64 | 分组65 | 分组66]
+发送方收到正确确认: seqnum = -1, acknum = 62, checksum = 12789, ....................
+移动后: base=63, 窗口大小=4
+【滑动窗口状态】base=63, nextseqnum=67, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组63 | 分组64 | 分组65 | 分组66]
+>>窗口移动完成<<
+
+ERROR：接收方未收到正确报文：失序: seqnum = 63, acknum = -1, checksum = 3793, LKKKKKKKKKKKKKKKKKKK
+接收方重发上次ack: seqnum = -1, acknum = 62, checksum = 12789, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 64, acknum = -1, checksum = 1222, LLLLLLLLLLLLLLLLLLLL
+接收方重发上次ack: seqnum = -1, acknum = 62, checksum = 12789, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 66, acknum = -1, checksum = 61615, NNNNNNNNNNNNNNNNNNNN
+接收方重发上次ack: seqnum = -1, acknum = 62, checksum = 12789, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 64, acknum = -1, checksum = 1222, LLLLLLLLLLLLLLLLLLLL
+接收方重发上次ack: seqnum = -1, acknum = 62, checksum = 12789, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 65, acknum = -1, checksum = 64186, MMMMMMMMMMMMMMMMMMMM
+接收方重发上次ack: seqnum = -1, acknum = 62, checksum = 12789, ....................
+!!超时重传!!
+超时的分组: 63
+【滑动窗口状态】base=63, nextseqnum=67, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组63 | 分组64 | 分组65 | 分组66]
+超时重发: seqnum = 63, acknum = -1, checksum = 3793, KKKKKKKKKKKKKKKKKKKK
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 66, acknum = -1, checksum = 61615, NNNNNNNNNNNNNNNNNNNN
+接收方重发上次ack: seqnum = -1, acknum = 62, checksum = 12789, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 63, acknum = -1, checksum = 3793, LKKKKKKKKKKKKKKKKKKK
+接收方重发上次ack: seqnum = -1, acknum = 62, checksum = 12789, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 64, acknum = -1, checksum = 1222, LLLLLLLLLLLLLLLLLLLL
+接收方重发上次ack: seqnum = -1, acknum = 62, checksum = 12789, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 66, acknum = -1, checksum = 61615, ONNNNNNNNNNNNNNNNNNN
+接收方重发上次ack: seqnum = -1, acknum = 62, checksum = 12789, ....................
+!!超时重传!!
+超时的分组: 63
+【滑动窗口状态】base=63, nextseqnum=67, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组63 | 分组64 | 分组65 | 分组66]
+超时重发: seqnum = 63, acknum = -1, checksum = 3793, KKKKKKKKKKKKKKKKKKKK
+重传完成
+
+接收方正确收到按序分组: seqnum = 63, acknum = -1, checksum = 3793, KKKKKKKKKKKKKKKKKKKK
+******模拟网络环境******：向上递交给应用层数据：KKKKKKKKKKKKKKKKKKKK
+接收方发送确认报文: seqnum = -1, acknum = 63, checksum = 12788, ....................
+接收方正确收到按序分组: seqnum = 64, acknum = -1, checksum = 1222, LLLLLLLLLLLLLLLLLLLL
+******模拟网络环境******：向上递交给应用层数据：LLLLLLLLLLLLLLLLLLLL
+接收方发送确认报文: seqnum = -1, acknum = 64, checksum = 12787, ....................
+接收方正确收到按序分组: seqnum = 65, acknum = -1, checksum = 64186, MMMMMMMMMMMMMMMMMMMM
+******模拟网络环境******：向上递交给应用层数据：MMMMMMMMMMMMMMMMMMMM
+接收方发送确认报文: seqnum = -1, acknum = 65, checksum = 12786, ....................
+接收方正确收到按序分组: seqnum = 66, acknum = -1, checksum = 61615, NNNNNNNNNNNNNNNNNNNN
+******模拟网络环境******：向上递交给应用层数据：NNNNNNNNNNNNNNNNNNNN
+接收方发送确认报文: seqnum = -1, acknum = 66, checksum = 12785, ....................
+!!超时重传!!
+超时的分组: 63
+【滑动窗口状态】base=63, nextseqnum=67, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组63 | 分组64 | 分组65 | 分组66]
+超时重发: seqnum = 63, acknum = -1, checksum = 3793, KKKKKKKKKKKKKKKKKKKK
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 63, acknum = -1, checksum = 3793, KKKKKKKKKKKKKKKKKKKK
+接收方重发上次ack: seqnum = -1, acknum = 66, checksum = 12785, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 64, acknum = -1, checksum = 1222, LLLLLLLLLLLLLLLLLLLL
+接收方重发上次ack: seqnum = -1, acknum = 66, checksum = 12785, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 65, acknum = -1, checksum = 64186, MMMMMMMMMMMMMMMMMMMM
+接收方重发上次ack: seqnum = -1, acknum = 66, checksum = 12785, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 66, acknum = -1, checksum = 61615, NNNNNNNNNNNNNNNNNNNN
+接收方重发上次ack: seqnum = -1, acknum = 66, checksum = 12785, ....................
+>>收到ACK63，开始移动窗口<<
+移动前: base=63, 窗口大小=4
+【滑动窗口状态】base=63, nextseqnum=67, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组63 | 分组64 | 分组65 | 分组66]
+发送方收到正确确认: seqnum = -1, acknum = 63, checksum = 12788, ....................
+移动后: base=64, 窗口大小=3
+【滑动窗口状态】base=64, nextseqnum=67, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组64 | 分组65 | 分组66]
+>>窗口移动完成<<
+
+>>收到ACK64，开始移动窗口<<
+移动前: base=64, 窗口大小=3
+【滑动窗口状态】base=64, nextseqnum=67, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组64 | 分组65 | 分组66]
+发送方收到正确确认: seqnum = -1, acknum = 64, checksum = 12787, ....................
+移动后: base=65, 窗口大小=2
+【滑动窗口状态】base=65, nextseqnum=67, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组65 | 分组66]
+>>窗口移动完成<<
+
+>>收到ACK65，开始移动窗口<<
+移动前: base=65, 窗口大小=2
+【滑动窗口状态】base=65, nextseqnum=67, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组65 | 分组66]
+发送方收到正确确认: seqnum = -1, acknum = 65, checksum = 12786, ....................
+移动后: base=66, 窗口大小=1
+【滑动窗口状态】base=66, nextseqnum=67, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组66]
+>>窗口移动完成<<
+
+>>收到ACK66，开始移动窗口<<
+移动前: base=66, 窗口大小=1
+【滑动窗口状态】base=66, nextseqnum=67, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组66]
+发送方收到正确确认: seqnum = -1, acknum = 66, checksum = 12785, ....................
+移动后: base=67, 窗口大小=0
+【滑动窗口状态】base=67, nextseqnum=67, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 67, acknum = -1, checksum = 59044, OOOOOOOOOOOOOOOOOOOO
+>>>>>> 发送分组67 <<<<<<
+【滑动窗口状态】base=67, nextseqnum=67, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组67]
+
+发送方发送报文: seqnum = 68, acknum = -1, checksum = 56473, PPPPPPPPPPPPPPPPPPPP
+>>>>>> 发送分组68 <<<<<<
+【滑动窗口状态】base=67, nextseqnum=68, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组67 | 分组68]
+
+发送方发送报文: seqnum = 69, acknum = -1, checksum = 53902, QQQQQQQQQQQQQQQQQQQQ
+>>>>>> 发送分组69 <<<<<<
+【滑动窗口状态】base=67, nextseqnum=69, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组67 | 分组68 | 分组69]
+
+发送方发送报文: seqnum = 70, acknum = -1, checksum = 51331, RRRRRRRRRRRRRRRRRRRR
+>>>>>> 发送分组70 <<<<<<
+【滑动窗口状态】base=67, nextseqnum=70, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组67 | 分组68 | 分组69 | 分组70]
+
+发送方发送报文: seqnum = 71, acknum = -1, checksum = 48760, SSSSSSSSSSSSSSSSSSSS
+>>>>>> 发送分组71 <<<<<<
+【滑动窗口状态】base=67, nextseqnum=71, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组67 | 分组68 | 分组69 | 分组70 | 分组71]
+
+接收方正确收到按序分组: seqnum = 67, acknum = -1, checksum = 59044, OOOOOOOOOOOOOOOOOOOO
+******模拟网络环境******：向上递交给应用层数据：OOOOOOOOOOOOOOOOOOOO
+接收方发送确认报文: seqnum = -1, acknum = 67, checksum = 12784, ....................
+>>收到ACK67，开始移动窗口<<
+移动前: base=67, 窗口大小=5
+【滑动窗口状态】base=67, nextseqnum=72, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组67 | 分组68 | 分组69 | 分组70 | 分组71]
+发送方收到正确确认: seqnum = -1, acknum = 67, checksum = 12784, ....................
+移动后: base=68, 窗口大小=4
+【滑动窗口状态】base=68, nextseqnum=72, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组68 | 分组69 | 分组70 | 分组71]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 68, acknum = -1, checksum = 56473, PPPPPPPPPPPPPPPPPPPP
+******模拟网络环境******：向上递交给应用层数据：PPPPPPPPPPPPPPPPPPPP
+接收方发送确认报文: seqnum = -1, acknum = 68, checksum = 12783, ....................
+>>收到ACK68，开始移动窗口<<
+移动前: base=68, 窗口大小=4
+【滑动窗口状态】base=68, nextseqnum=72, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组68 | 分组69 | 分组70 | 分组71]
+发送方收到正确确认: seqnum = -1, acknum = 68, checksum = 12783, ....................
+移动后: base=69, 窗口大小=3
+【滑动窗口状态】base=69, nextseqnum=72, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组69 | 分组70 | 分组71]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 69, acknum = -1, checksum = 53902, QQQQQQQQQQQQQQQQQQQQ
+******模拟网络环境******：向上递交给应用层数据：QQQQQQQQQQQQQQQQQQQQ
+接收方发送确认报文: seqnum = -1, acknum = 69, checksum = 12782, ....................
+>>收到ACK69，开始移动窗口<<
+移动前: base=69, 窗口大小=3
+【滑动窗口状态】base=69, nextseqnum=72, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组69 | 分组70 | 分组71]
+发送方收到正确确认: seqnum = -1, acknum = 69, checksum = 12782, ....................
+移动后: base=70, 窗口大小=2
+【滑动窗口状态】base=70, nextseqnum=72, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组70 | 分组71]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 70, acknum = -1, checksum = 51331, RRRRRRRRRRRRRRRRRRRR
+******模拟网络环境******：向上递交给应用层数据：RRRRRRRRRRRRRRRRRRRR
+接收方发送确认报文: seqnum = -1, acknum = 70, checksum = 12781, ....................
+接收方正确收到按序分组: seqnum = 71, acknum = -1, checksum = 48760, SSSSSSSSSSSSSSSSSSSS
+******模拟网络环境******：向上递交给应用层数据：SSSSSSSSSSSSSSSSSSSS
+接收方发送确认报文: seqnum = -1, acknum = 71, checksum = 12780, ....................
+>>收到ACK71，开始移动窗口<<
+移动前: base=70, 窗口大小=2
+【滑动窗口状态】base=70, nextseqnum=72, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组70 | 分组71]
+发送方收到正确确认: seqnum = -1, acknum = 71, checksum = 12780, ....................
+移动后: base=72, 窗口大小=0
+【滑动窗口状态】base=72, nextseqnum=72, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 72, acknum = -1, checksum = 46189, TTTTTTTTTTTTTTTTTTTT
+>>>>>> 发送分组72 <<<<<<
+【滑动窗口状态】base=72, nextseqnum=72, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组72]
+
+发送方发送报文: seqnum = 73, acknum = -1, checksum = 43618, UUUUUUUUUUUUUUUUUUUU
+>>>>>> 发送分组73 <<<<<<
+【滑动窗口状态】base=72, nextseqnum=73, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组72 | 分组73]
+
+发送方发送报文: seqnum = 74, acknum = -1, checksum = 41047, VVVVVVVVVVVVVVVVVVVV
+>>>>>> 发送分组74 <<<<<<
+【滑动窗口状态】base=72, nextseqnum=74, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组72 | 分组73 | 分组74]
+
+发送方发送报文: seqnum = 75, acknum = -1, checksum = 38476, WWWWWWWWWWWWWWWWWWWW
+>>>>>> 发送分组75 <<<<<<
+【滑动窗口状态】base=72, nextseqnum=75, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组72 | 分组73 | 分组74 | 分组75]
+
+发送方发送报文: seqnum = 76, acknum = -1, checksum = 35905, XXXXXXXXXXXXXXXXXXXX
+>>>>>> 发送分组76 <<<<<<
+【滑动窗口状态】base=72, nextseqnum=76, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组72 | 分组73 | 分组74 | 分组75 | 分组76]
+
+接收方正确收到按序分组: seqnum = 72, acknum = -1, checksum = 46189, TTTTTTTTTTTTTTTTTTTT
+******模拟网络环境******：向上递交给应用层数据：TTTTTTTTTTTTTTTTTTTT
+接收方发送确认报文: seqnum = -1, acknum = 72, checksum = 12779, ....................
+接收方正确收到按序分组: seqnum = 73, acknum = -1, checksum = 43618, UUUUUUUUUUUUUUUUUUUU
+******模拟网络环境******：向上递交给应用层数据：UUUUUUUUUUUUUUUUUUUU
+接收方发送确认报文: seqnum = -1, acknum = 73, checksum = 12778, ....................
+>>收到ACK72，开始移动窗口<<
+移动前: base=72, 窗口大小=5
+【滑动窗口状态】base=72, nextseqnum=77, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组72 | 分组73 | 分组74 | 分组75 | 分组76]
+发送方收到正确确认: seqnum = -1, acknum = 72, checksum = 12779, ....................
+移动后: base=73, 窗口大小=4
+【滑动窗口状态】base=73, nextseqnum=77, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组73 | 分组74 | 分组75 | 分组76]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 74, acknum = -1, checksum = 41047, VVVVVVVVVVVVVVVVVVVV
+******模拟网络环境******：向上递交给应用层数据：VVVVVVVVVVVVVVVVVVVV
+接收方发送确认报文: seqnum = -1, acknum = 74, checksum = 12777, ....................
+>>收到ACK73，开始移动窗口<<
+移动前: base=73, 窗口大小=4
+【滑动窗口状态】base=73, nextseqnum=77, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组73 | 分组74 | 分组75 | 分组76]
+发送方收到正确确认: seqnum = -1, acknum = 73, checksum = 12778, ....................
+移动后: base=74, 窗口大小=3
+【滑动窗口状态】base=74, nextseqnum=77, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组74 | 分组75 | 分组76]
+>>窗口移动完成<<
+
+ERROR：接收方未收到正确报文：失序: seqnum = 76, acknum = -1, checksum = 35905, XXXXXXXXXXXXXXXXXXXX
+接收方重发上次ack: seqnum = -1, acknum = 74, checksum = 12777, ....................
+>>收到ACK74，开始移动窗口<<
+移动前: base=74, 窗口大小=3
+【滑动窗口状态】base=74, nextseqnum=77, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组74 | 分组75 | 分组76]
+发送方收到正确确认: seqnum = -1, acknum = 74, checksum = 12777, ....................
+移动后: base=75, 窗口大小=2
+【滑动窗口状态】base=75, nextseqnum=77, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组75 | 分组76]
+>>窗口移动完成<<
+
+!!超时重传!!
+超时的分组: 75
+【滑动窗口状态】base=75, nextseqnum=77, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组75 | 分组76]
+超时重发: seqnum = 75, acknum = -1, checksum = 38476, WWWWWWWWWWWWWWWWWWWW
+重传完成
+
+接收方正确收到按序分组: seqnum = 75, acknum = -1, checksum = 38476, WWWWWWWWWWWWWWWWWWWW
+******模拟网络环境******：向上递交给应用层数据：WWWWWWWWWWWWWWWWWWWW
+接收方发送确认报文: seqnum = -1, acknum = 75, checksum = 12776, ....................
+>>收到ACK75，开始移动窗口<<
+移动前: base=75, 窗口大小=2
+【滑动窗口状态】base=75, nextseqnum=77, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组75 | 分组76]
+发送方收到正确确认: seqnum = -1, acknum = 75, checksum = 12776, ....................
+移动后: base=76, 窗口大小=1
+【滑动窗口状态】base=76, nextseqnum=77, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组76]
+>>窗口移动完成<<
+
+!!超时重传!!
+超时的分组: 76
+【滑动窗口状态】base=76, nextseqnum=77, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组76]
+超时重发: seqnum = 76, acknum = -1, checksum = 35905, XXXXXXXXXXXXXXXXXXXX
+重传完成
+
+接收方正确收到按序分组: seqnum = 76, acknum = -1, checksum = 35905, XXXXXXXXXXXXXXXXXXXX
+******模拟网络环境******：向上递交给应用层数据：XXXXXXXXXXXXXXXXXXXX
+接收方发送确认报文: seqnum = -1, acknum = 76, checksum = 12775, ....................
+!!超时重传!!
+超时的分组: 76
+【滑动窗口状态】base=76, nextseqnum=77, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组76]
+超时重发: seqnum = 76, acknum = -1, checksum = 35905, XXXXXXXXXXXXXXXXXXXX
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 76, acknum = -1, checksum = 35905, XXXXXXXXXXXXXXXXXXXX
+接收方重发上次ack: seqnum = -1, acknum = 76, checksum = 12775, ....................
+>>收到ACK76，开始移动窗口<<
+移动前: base=76, 窗口大小=1
+【滑动窗口状态】base=76, nextseqnum=77, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组76]
+发送方收到正确确认: seqnum = -1, acknum = 76, checksum = 12775, ....................
+移动后: base=77, 窗口大小=0
+【滑动窗口状态】base=77, nextseqnum=77, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 77, acknum = -1, checksum = 33334, YYYYYYYYYYYYYYYYYYYY
+>>>>>> 发送分组77 <<<<<<
+【滑动窗口状态】base=77, nextseqnum=77, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组77]
+
+发送方发送报文: seqnum = 78, acknum = -1, checksum = 30763, ZZZZZZZZZZZZZZZZZZZZ
+>>>>>> 发送分组78 <<<<<<
+【滑动窗口状态】base=77, nextseqnum=78, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组77 | 分组78]
+
+发送方发送报文: seqnum = 79, acknum = -1, checksum = 29477, AAAAAAAAAAAAAAAAAAAA
+>>>>>> 发送分组79 <<<<<<
+【滑动窗口状态】base=77, nextseqnum=79, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组77 | 分组78 | 分组79]
+
+发送方发送报文: seqnum = 80, acknum = -1, checksum = 26906, BBBBBBBBBBBBBBBBBBBB
+>>>>>> 发送分组80 <<<<<<
+【滑动窗口状态】base=77, nextseqnum=80, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组77 | 分组78 | 分组79 | 分组80]
+
+发送方发送报文: seqnum = 81, acknum = -1, checksum = 24335, CCCCCCCCCCCCCCCCCCCC
+>>>>>> 发送分组81 <<<<<<
+【滑动窗口状态】base=77, nextseqnum=81, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组77 | 分组78 | 分组79 | 分组80 | 分组81]
+
+接收方正确收到按序分组: seqnum = 77, acknum = -1, checksum = 33334, YYYYYYYYYYYYYYYYYYYY
+******模拟网络环境******：向上递交给应用层数据：YYYYYYYYYYYYYYYYYYYY
+接收方发送确认报文: seqnum = -1, acknum = 77, checksum = 12774, ....................
+接收方正确收到按序分组: seqnum = 78, acknum = -1, checksum = 30763, ZZZZZZZZZZZZZZZZZZZZ
+******模拟网络环境******：向上递交给应用层数据：ZZZZZZZZZZZZZZZZZZZZ
+接收方发送确认报文: seqnum = -1, acknum = 78, checksum = 12773, ....................
+>>收到ACK77，开始移动窗口<<
+移动前: base=77, 窗口大小=5
+【滑动窗口状态】base=77, nextseqnum=82, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组77 | 分组78 | 分组79 | 分组80 | 分组81]
+发送方收到正确确认: seqnum = -1, acknum = 77, checksum = 12774, ....................
+移动后: base=78, 窗口大小=4
+【滑动窗口状态】base=78, nextseqnum=82, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组78 | 分组79 | 分组80 | 分组81]
+>>窗口移动完成<<
+
+>>收到ACK78，开始移动窗口<<
+移动前: base=78, 窗口大小=4
+【滑动窗口状态】base=78, nextseqnum=82, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组78 | 分组79 | 分组80 | 分组81]
+发送方收到正确确认: seqnum = -1, acknum = 78, checksum = 12773, ....................
+移动后: base=79, 窗口大小=3
+【滑动窗口状态】base=79, nextseqnum=82, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组79 | 分组80 | 分组81]
+>>窗口移动完成<<
+
+ERROR：接收方未收到正确报文：失序: seqnum = 80, acknum = -1, checksum = 26906, BBBBBBBBBBBBBBBBBBBB
+接收方重发上次ack: seqnum = -1, acknum = 78, checksum = 12773, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 81, acknum = -1, checksum = 24335, CCCCCCCCCCCCCCCCCCCC
+接收方重发上次ack: seqnum = -1, acknum = 78, checksum = 12773, ....................
+!!超时重传!!
+超时的分组: 79
+【滑动窗口状态】base=79, nextseqnum=82, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组79 | 分组80 | 分组81]
+超时重发: seqnum = 79, acknum = -1, checksum = 29477, AAAAAAAAAAAAAAAAAAAA
+重传完成
+
+接收方正确收到按序分组: seqnum = 79, acknum = -1, checksum = 29477, AAAAAAAAAAAAAAAAAAAA
+******模拟网络环境******：向上递交给应用层数据：AAAAAAAAAAAAAAAAAAAA
+接收方发送确认报文: seqnum = -1, acknum = 79, checksum = 12772, ....................
+接收方正确收到按序分组: seqnum = 80, acknum = -1, checksum = 26906, BBBBBBBBBBBBBBBBBBBB
+******模拟网络环境******：向上递交给应用层数据：BBBBBBBBBBBBBBBBBBBB
+接收方发送确认报文: seqnum = -1, acknum = 80, checksum = 12771, ....................
+接收方正确收到按序分组: seqnum = 81, acknum = -1, checksum = 24335, CCCCCCCCCCCCCCCCCCCC
+******模拟网络环境******：向上递交给应用层数据：CCCCCCCCCCCCCCCCCCCC
+接收方发送确认报文: seqnum = -1, acknum = 81, checksum = 12770, ....................
+>>收到ACK79，开始移动窗口<<
+移动前: base=79, 窗口大小=3
+【滑动窗口状态】base=79, nextseqnum=82, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组79 | 分组80 | 分组81]
+发送方收到正确确认: seqnum = -1, acknum = 79, checksum = 12772, ....................
+移动后: base=80, 窗口大小=2
+【滑动窗口状态】base=80, nextseqnum=82, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组80 | 分组81]
+>>窗口移动完成<<
+
+>>收到ACK80，开始移动窗口<<
+移动前: base=80, 窗口大小=2
+【滑动窗口状态】base=80, nextseqnum=82, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组80 | 分组81]
+发送方收到正确确认: seqnum = -1, acknum = 80, checksum = 12771, ....................
+移动后: base=81, 窗口大小=1
+【滑动窗口状态】base=81, nextseqnum=82, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组81]
+>>窗口移动完成<<
+
+>>收到ACK81，开始移动窗口<<
+移动前: base=81, 窗口大小=1
+【滑动窗口状态】base=81, nextseqnum=82, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组81]
+发送方收到正确确认: seqnum = -1, acknum = 81, checksum = 12770, ....................
+移动后: base=82, 窗口大小=0
+【滑动窗口状态】base=82, nextseqnum=82, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 82, acknum = -1, checksum = 21764, DDDDDDDDDDDDDDDDDDDD
+>>>>>> 发送分组82 <<<<<<
+【滑动窗口状态】base=82, nextseqnum=82, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组82]
+
+发送方发送报文: seqnum = 83, acknum = -1, checksum = 19193, EEEEEEEEEEEEEEEEEEEE
+>>>>>> 发送分组83 <<<<<<
+【滑动窗口状态】base=82, nextseqnum=83, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组82 | 分组83]
+
+发送方发送报文: seqnum = 84, acknum = -1, checksum = 16622, FFFFFFFFFFFFFFFFFFFF
+>>>>>> 发送分组84 <<<<<<
+【滑动窗口状态】base=82, nextseqnum=84, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组82 | 分组83 | 分组84]
+
+发送方发送报文: seqnum = 85, acknum = -1, checksum = 14051, GGGGGGGGGGGGGGGGGGGG
+>>>>>> 发送分组85 <<<<<<
+【滑动窗口状态】base=82, nextseqnum=85, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组82 | 分组83 | 分组84 | 分组85]
+
+发送方发送报文: seqnum = 86, acknum = -1, checksum = 11480, HHHHHHHHHHHHHHHHHHHH
+>>>>>> 发送分组86 <<<<<<
+【滑动窗口状态】base=82, nextseqnum=86, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组82 | 分组83 | 分组84 | 分组85 | 分组86]
+
+接收方正确收到按序分组: seqnum = 82, acknum = -1, checksum = 21764, DDDDDDDDDDDDDDDDDDDD
+******模拟网络环境******：向上递交给应用层数据：DDDDDDDDDDDDDDDDDDDD
+接收方发送确认报文: seqnum = -1, acknum = 82, checksum = 12769, ....................
+接收方正确收到按序分组: seqnum = 83, acknum = -1, checksum = 19193, EEEEEEEEEEEEEEEEEEEE
+******模拟网络环境******：向上递交给应用层数据：EEEEEEEEEEEEEEEEEEEE
+接收方发送确认报文: seqnum = -1, acknum = 83, checksum = 12768, ....................
+>>收到ACK82，开始移动窗口<<
+移动前: base=82, 窗口大小=5
+【滑动窗口状态】base=82, nextseqnum=87, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组82 | 分组83 | 分组84 | 分组85 | 分组86]
+发送方收到正确确认: seqnum = -1, acknum = 82, checksum = 12769, ....................
+移动后: base=83, 窗口大小=4
+【滑动窗口状态】base=83, nextseqnum=87, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组83 | 分组84 | 分组85 | 分组86]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 84, acknum = -1, checksum = 16622, FFFFFFFFFFFFFFFFFFFF
+******模拟网络环境******：向上递交给应用层数据：FFFFFFFFFFFFFFFFFFFF
+接收方发送确认报文: seqnum = -1, acknum = 84, checksum = 12767, ....................
+>>收到ACK83，开始移动窗口<<
+移动前: base=83, 窗口大小=4
+【滑动窗口状态】base=83, nextseqnum=87, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组83 | 分组84 | 分组85 | 分组86]
+发送方收到正确确认: seqnum = -1, acknum = 83, checksum = 12768, ....................
+移动后: base=84, 窗口大小=3
+【滑动窗口状态】base=84, nextseqnum=87, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组84 | 分组85 | 分组86]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 85, acknum = -1, checksum = 14051, GGGGGGGGGGGGGGGGGGGG
+******模拟网络环境******：向上递交给应用层数据：GGGGGGGGGGGGGGGGGGGG
+接收方发送确认报文: seqnum = -1, acknum = 85, checksum = 12766, ....................
+接收方正确收到按序分组: seqnum = 86, acknum = -1, checksum = 11480, HHHHHHHHHHHHHHHHHHHH
+******模拟网络环境******：向上递交给应用层数据：HHHHHHHHHHHHHHHHHHHH
+接收方发送确认报文: seqnum = -1, acknum = 86, checksum = 12765, ....................
+>>收到ACK84，开始移动窗口<<
+移动前: base=84, 窗口大小=3
+【滑动窗口状态】base=84, nextseqnum=87, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组84 | 分组85 | 分组86]
+发送方收到正确确认: seqnum = -1, acknum = 84, checksum = 12767, ....................
+移动后: base=85, 窗口大小=2
+【滑动窗口状态】base=85, nextseqnum=87, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组85 | 分组86]
+>>窗口移动完成<<
+
+>>收到ACK85，开始移动窗口<<
+移动前: base=85, 窗口大小=2
+【滑动窗口状态】base=85, nextseqnum=87, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组85 | 分组86]
+发送方收到正确确认: seqnum = -1, acknum = 85, checksum = 12766, ....................
+移动后: base=86, 窗口大小=1
+【滑动窗口状态】base=86, nextseqnum=87, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组86]
+>>窗口移动完成<<
+
+>>收到ACK86，开始移动窗口<<
+移动前: base=86, 窗口大小=1
+【滑动窗口状态】base=86, nextseqnum=87, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组86]
+发送方收到正确确认: seqnum = -1, acknum = 86, checksum = 12765, ....................
+移动后: base=87, 窗口大小=0
+【滑动窗口状态】base=87, nextseqnum=87, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 87, acknum = -1, checksum = 8909, IIIIIIIIIIIIIIIIIIII
+>>>>>> 发送分组87 <<<<<<
+【滑动窗口状态】base=87, nextseqnum=87, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组87]
+
+发送方发送报文: seqnum = 88, acknum = -1, checksum = 6338, JJJJJJJJJJJJJJJJJJJJ
+>>>>>> 发送分组88 <<<<<<
+【滑动窗口状态】base=87, nextseqnum=88, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组87 | 分组88]
+
+发送方发送报文: seqnum = 89, acknum = -1, checksum = 3767, KKKKKKKKKKKKKKKKKKKK
+>>>>>> 发送分组89 <<<<<<
+【滑动窗口状态】base=87, nextseqnum=89, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组87 | 分组88 | 分组89]
+
+发送方发送报文: seqnum = 90, acknum = -1, checksum = 1196, LLLLLLLLLLLLLLLLLLLL
+>>>>>> 发送分组90 <<<<<<
+【滑动窗口状态】base=87, nextseqnum=90, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组87 | 分组88 | 分组89 | 分组90]
+
+发送方发送报文: seqnum = 91, acknum = -1, checksum = 64160, MMMMMMMMMMMMMMMMMMMM
+>>>>>> 发送分组91 <<<<<<
+【滑动窗口状态】base=87, nextseqnum=91, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组87 | 分组88 | 分组89 | 分组90 | 分组91]
+
+接收方正确收到按序分组: seqnum = 87, acknum = -1, checksum = 8909, IIIIIIIIIIIIIIIIIIII
+******模拟网络环境******：向上递交给应用层数据：IIIIIIIIIIIIIIIIIIII
+接收方发送确认报文: seqnum = -1, acknum = 87, checksum = 12764, ....................
+>>收到ACK87，开始移动窗口<<
+移动前: base=87, 窗口大小=5
+【滑动窗口状态】base=87, nextseqnum=92, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组87 | 分组88 | 分组89 | 分组90 | 分组91]
+发送方收到正确确认: seqnum = -1, acknum = 87, checksum = 12764, ....................
+移动后: base=88, 窗口大小=4
+【滑动窗口状态】base=88, nextseqnum=92, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组88 | 分组89 | 分组90 | 分组91]
+>>窗口移动完成<<
+
+ERROR：接收方未收到正确报文：失序: seqnum = 89, acknum = -1, checksum = 3767, KKKKKKKKKKKKKKKKKKKK
+接收方重发上次ack: seqnum = -1, acknum = 87, checksum = 12764, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 91, acknum = -1, checksum = 64160, NMMMMMMMMMMMMMMMMMMM
+接收方重发上次ack: seqnum = -1, acknum = 87, checksum = 12764, ....................
+!!超时重传!!
+超时的分组: 88
+【滑动窗口状态】base=88, nextseqnum=92, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组88 | 分组89 | 分组90 | 分组91]
+超时重发: seqnum = 88, acknum = -1, checksum = 6338, JJJJJJJJJJJJJJJJJJJJ
+重传完成
+
+接收方正确收到按序分组: seqnum = 88, acknum = -1, checksum = 6338, JJJJJJJJJJJJJJJJJJJJ
+******模拟网络环境******：向上递交给应用层数据：JJJJJJJJJJJJJJJJJJJJ
+接收方发送确认报文: seqnum = -1, acknum = 88, checksum = 12763, ....................
+接收方正确收到按序分组: seqnum = 89, acknum = -1, checksum = 3767, KKKKKKKKKKKKKKKKKKKK
+******模拟网络环境******：向上递交给应用层数据：KKKKKKKKKKKKKKKKKKKK
+接收方发送确认报文: seqnum = -1, acknum = 89, checksum = 12762, ....................
+接收方正确收到按序分组: seqnum = 90, acknum = -1, checksum = 1196, LLLLLLLLLLLLLLLLLLLL
+******模拟网络环境******：向上递交给应用层数据：LLLLLLLLLLLLLLLLLLLL
+接收方发送确认报文: seqnum = -1, acknum = 90, checksum = 12761, ....................
+>>收到ACK88，开始移动窗口<<
+移动前: base=88, 窗口大小=4
+【滑动窗口状态】base=88, nextseqnum=92, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组88 | 分组89 | 分组90 | 分组91]
+发送方收到正确确认: seqnum = -1, acknum = 88, checksum = 12763, ....................
+移动后: base=89, 窗口大小=3
+【滑动窗口状态】base=89, nextseqnum=92, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组89 | 分组90 | 分组91]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 91, acknum = -1, checksum = 64160, MMMMMMMMMMMMMMMMMMMM
+******模拟网络环境******：向上递交给应用层数据：MMMMMMMMMMMMMMMMMMMM
+接收方发送确认报文: seqnum = -1, acknum = 91, checksum = 12760, ....................
+>>收到ACK89，开始移动窗口<<
+移动前: base=89, 窗口大小=3
+【滑动窗口状态】base=89, nextseqnum=92, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组89 | 分组90 | 分组91]
+发送方收到正确确认: seqnum = -1, acknum = 89, checksum = 12762, ....................
+移动后: base=90, 窗口大小=2
+【滑动窗口状态】base=90, nextseqnum=92, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组90 | 分组91]
+>>窗口移动完成<<
+
+>>收到ACK90，开始移动窗口<<
+移动前: base=90, 窗口大小=2
+【滑动窗口状态】base=90, nextseqnum=92, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组90 | 分组91]
+发送方收到正确确认: seqnum = -1, acknum = 90, checksum = 12761, ....................
+移动后: base=91, 窗口大小=1
+【滑动窗口状态】base=91, nextseqnum=92, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组91]
+>>窗口移动完成<<
+
+>>收到ACK91，开始移动窗口<<
+移动前: base=91, 窗口大小=1
+【滑动窗口状态】base=91, nextseqnum=92, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组91]
+发送方收到正确确认: seqnum = -1, acknum = 91, checksum = 12760, ....................
+移动后: base=92, 窗口大小=0
+【滑动窗口状态】base=92, nextseqnum=92, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 92, acknum = -1, checksum = 61589, NNNNNNNNNNNNNNNNNNNN
+>>>>>> 发送分组92 <<<<<<
+【滑动窗口状态】base=92, nextseqnum=92, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组92]
+
+发送方发送报文: seqnum = 93, acknum = -1, checksum = 59018, OOOOOOOOOOOOOOOOOOOO
+>>>>>> 发送分组93 <<<<<<
+【滑动窗口状态】base=92, nextseqnum=93, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组92 | 分组93]
+
+发送方发送报文: seqnum = 94, acknum = -1, checksum = 56447, PPPPPPPPPPPPPPPPPPPP
+>>>>>> 发送分组94 <<<<<<
+【滑动窗口状态】base=92, nextseqnum=94, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组92 | 分组93 | 分组94]
+
+发送方发送报文: seqnum = 95, acknum = -1, checksum = 53876, QQQQQQQQQQQQQQQQQQQQ
+>>>>>> 发送分组95 <<<<<<
+【滑动窗口状态】base=92, nextseqnum=95, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组92 | 分组93 | 分组94 | 分组95]
+
+发送方发送报文: seqnum = 96, acknum = -1, checksum = 51305, RRRRRRRRRRRRRRRRRRRR
+>>>>>> 发送分组96 <<<<<<
+【滑动窗口状态】base=92, nextseqnum=96, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组92 | 分组93 | 分组94 | 分组95 | 分组96]
+
+接收方正确收到按序分组: seqnum = 92, acknum = -1, checksum = 61589, NNNNNNNNNNNNNNNNNNNN
+******模拟网络环境******：向上递交给应用层数据：NNNNNNNNNNNNNNNNNNNN
+接收方发送确认报文: seqnum = -1, acknum = 92, checksum = 12759, ....................
+接收方正确收到按序分组: seqnum = 93, acknum = -1, checksum = 59018, OOOOOOOOOOOOOOOOOOOO
+******模拟网络环境******：向上递交给应用层数据：OOOOOOOOOOOOOOOOOOOO
+接收方发送确认报文: seqnum = -1, acknum = 93, checksum = 12758, ....................
+接收方正确收到按序分组: seqnum = 94, acknum = -1, checksum = 56447, PPPPPPPPPPPPPPPPPPPP
+******模拟网络环境******：向上递交给应用层数据：PPPPPPPPPPPPPPPPPPPP
+接收方发送确认报文: seqnum = -1, acknum = 94, checksum = 12757, ....................
+>>收到ACK92，开始移动窗口<<
+移动前: base=92, 窗口大小=5
+【滑动窗口状态】base=92, nextseqnum=97, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组92 | 分组93 | 分组94 | 分组95 | 分组96]
+发送方收到正确确认: seqnum = -1, acknum = 92, checksum = 12759, ....................
+移动后: base=93, 窗口大小=4
+【滑动窗口状态】base=93, nextseqnum=97, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组93 | 分组94 | 分组95 | 分组96]
+>>窗口移动完成<<
+
+>>收到ACK93，开始移动窗口<<
+移动前: base=93, 窗口大小=4
+【滑动窗口状态】base=93, nextseqnum=97, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组93 | 分组94 | 分组95 | 分组96]
+发送方收到正确确认: seqnum = -1, acknum = 93, checksum = 12758, ....................
+移动后: base=94, 窗口大小=3
+【滑动窗口状态】base=94, nextseqnum=97, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组94 | 分组95 | 分组96]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 95, acknum = -1, checksum = 53876, QQQQQQQQQQQQQQQQQQQQ
+******模拟网络环境******：向上递交给应用层数据：QQQQQQQQQQQQQQQQQQQQ
+接收方发送确认报文: seqnum = -1, acknum = 95, checksum = 12756, ....................
+>>收到ACK94，开始移动窗口<<
+移动前: base=94, 窗口大小=3
+【滑动窗口状态】base=94, nextseqnum=97, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组94 | 分组95 | 分组96]
+发送方收到正确确认: seqnum = -1, acknum = 94, checksum = 12757, ....................
+移动后: base=95, 窗口大小=2
+【滑动窗口状态】base=95, nextseqnum=97, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组95 | 分组96]
+>>窗口移动完成<<
+
+>>收到ACK95，开始移动窗口<<
+移动前: base=95, 窗口大小=2
+【滑动窗口状态】base=95, nextseqnum=97, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组95 | 分组96]
+发送方收到正确确认: seqnum = -1, acknum = 95, checksum = 12756, ....................
+移动后: base=96, 窗口大小=1
+【滑动窗口状态】base=96, nextseqnum=97, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组96]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 96, acknum = -1, checksum = 51305, RRRRRRRRRRRRRRRRRRRR
+******模拟网络环境******：向上递交给应用层数据：RRRRRRRRRRRRRRRRRRRR
+接收方发送确认报文: seqnum = -1, acknum = 96, checksum = 12755, ....................
+>>收到ACK96，开始移动窗口<<
+移动前: base=96, 窗口大小=1
+【滑动窗口状态】base=96, nextseqnum=97, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组96]
+发送方收到正确确认: seqnum = -1, acknum = 96, checksum = 12755, ....................
+移动后: base=97, 窗口大小=0
+【滑动窗口状态】base=97, nextseqnum=97, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+发送方发送报文: seqnum = 97, acknum = -1, checksum = 48734, SSSSSSSSSSSSSSSSSSSS
+>>>>>> 发送分组97 <<<<<<
+【滑动窗口状态】base=97, nextseqnum=97, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组97]
+
+发送方发送报文: seqnum = 98, acknum = -1, checksum = 46163, TTTTTTTTTTTTTTTTTTTT
+>>>>>> 发送分组98 <<<<<<
+【滑动窗口状态】base=97, nextseqnum=98, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组97 | 分组98]
+
+发送方发送报文: seqnum = 99, acknum = -1, checksum = 43592, UUUUUUUUUUUUUUUUUUUU
+>>>>>> 发送分组99 <<<<<<
+【滑动窗口状态】base=97, nextseqnum=99, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组97 | 分组98 | 分组99]
+
+发送方发送报文: seqnum = 100, acknum = -1, checksum = 41021, VVVVVVVVVVVVVVVVVVVV
+>>>>>> 发送分组100 <<<<<<
+【滑动窗口状态】base=97, nextseqnum=100, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组97 | 分组98 | 分组99 | 分组100]
+
+发送方发送报文: seqnum = 101, acknum = -1, checksum = 38450, WWWWWWWWWWWWWWWWWWWW
+>>>>>> 发送分组101 <<<<<<
+【滑动窗口状态】base=97, nextseqnum=101, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组97 | 分组98 | 分组99 | 分组100 | 分组101]
+
+接收方正确收到按序分组: seqnum = 97, acknum = -1, checksum = 48734, SSSSSSSSSSSSSSSSSSSS
+******模拟网络环境******：向上递交给应用层数据：SSSSSSSSSSSSSSSSSSSS
+接收方发送确认报文: seqnum = -1, acknum = 97, checksum = 12754, ....................
+>>收到ACK97，开始移动窗口<<
+移动前: base=97, 窗口大小=5
+【滑动窗口状态】base=97, nextseqnum=102, 窗口内分组数=5/8, 等待状态=否
+窗口内容: [分组97 | 分组98 | 分组99 | 分组100 | 分组101]
+发送方收到正确确认: seqnum = -1, acknum = 97, checksum = 12754, ....................
+移动后: base=98, 窗口大小=4
+【滑动窗口状态】base=98, nextseqnum=102, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组98 | 分组99 | 分组100 | 分组101]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 98, acknum = -1, checksum = 46163, TTTTTTTTTTTTTTTTTTTT
+******模拟网络环境******：向上递交给应用层数据：TTTTTTTTTTTTTTTTTTTT
+接收方发送确认报文: seqnum = -1, acknum = 98, checksum = 12753, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 100, acknum = -1, checksum = 41021, VVVVVVVVVVVVVVVVVVVV
+接收方重发上次ack: seqnum = -1, acknum = 98, checksum = 12753, ....................
+!!超时重传!!
+超时的分组: 98
+【滑动窗口状态】base=98, nextseqnum=102, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组98 | 分组99 | 分组100 | 分组101]
+超时重发: seqnum = 98, acknum = -1, checksum = 46163, TTTTTTTTTTTTTTTTTTTT
+重传完成
+
+>>收到ACK98，开始移动窗口<<
+移动前: base=98, 窗口大小=4
+【滑动窗口状态】base=98, nextseqnum=102, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组98 | 分组99 | 分组100 | 分组101]
+发送方收到正确确认: seqnum = -1, acknum = 98, checksum = 12753, ....................
+移动后: base=99, 窗口大小=3
+【滑动窗口状态】base=99, nextseqnum=102, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组99 | 分组100 | 分组101]
+>>窗口移动完成<<
+
+ERROR：接收方未收到正确报文：失序: seqnum = 101, acknum = -1, checksum = 38450, WWWWWWWWWWWWWWWWWWWW
+接收方重发上次ack: seqnum = -1, acknum = 98, checksum = 12753, ....................
+ERROR：接收方未收到正确报文：失序: seqnum = 98, acknum = -1, checksum = 46163, TTTTTTTTTTTTTTTTTTTT
+接收方重发上次ack: seqnum = -1, acknum = 98, checksum = 12753, ....................
+接收方正确收到按序分组: seqnum = 99, acknum = -1, checksum = 43592, UUUUUUUUUUUUUUUUUUUU
+******模拟网络环境******：向上递交给应用层数据：UUUUUUUUUUUUUUUUUUUU
+接收方发送确认报文: seqnum = -1, acknum = 99, checksum = 12752, ....................
+接收方正确收到按序分组: seqnum = 100, acknum = -1, checksum = 41021, VVVVVVVVVVVVVVVVVVVV
+******模拟网络环境******：向上递交给应用层数据：VVVVVVVVVVVVVVVVVVVV
+接收方发送确认报文: seqnum = -1, acknum = 100, checksum = 12751, ....................
+接收方正确收到按序分组: seqnum = 101, acknum = -1, checksum = 38450, WWWWWWWWWWWWWWWWWWWW
+******模拟网络环境******：向上递交给应用层数据：WWWWWWWWWWWWWWWWWWWW
+接收方发送确认报文: seqnum = -1, acknum = 101, checksum = 12750, ....................
+>>收到ACK99，开始移动窗口<<
+移动前: base=99, 窗口大小=3
+【滑动窗口状态】base=99, nextseqnum=102, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组99 | 分组100 | 分组101]
+发送方收到正确确认: seqnum = -1, acknum = 99, checksum = 12752, ....................
+移动后: base=100, 窗口大小=2
+【滑动窗口状态】base=100, nextseqnum=102, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组100 | 分组101]
+>>窗口移动完成<<
+
+!!超时重传!!
+超时的分组: 100
+【滑动窗口状态】base=100, nextseqnum=102, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组100 | 分组101]
+超时重发: seqnum = 100, acknum = -1, checksum = 41021, VVVVVVVVVVVVVVVVVVVV
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 100, acknum = -1, checksum = 41021, VVVVVVVVVVVVVVVVVVVV
+接收方重发上次ack: seqnum = -1, acknum = 101, checksum = 12750, ....................
+>>收到ACK101，开始移动窗口<<
+移动前: base=100, 窗口大小=2
+【滑动窗口状态】base=100, nextseqnum=102, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组100 | 分组101]
+发送方收到正确确认: seqnum = -1, acknum = 101, checksum = 12750, ....................
+移动后: base=102, 窗口大小=0
+【滑动窗口状态】base=102, nextseqnum=102, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+ERROR：接收方未收到正确报文：失序: seqnum = 101, acknum = -1, checksum = 38450, WWWWWWWWWWWWWWWWWWWW
+接收方重发上次ack: seqnum = -1, acknum = 101, checksum = 12750, ....................
+发送方发送报文: seqnum = 102, acknum = -1, checksum = 35879, XXXXXXXXXXXXXXXXXXXX
+>>>>>> 发送分组102 <<<<<<
+【滑动窗口状态】base=102, nextseqnum=102, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组102]
+
+发送方发送报文: seqnum = 103, acknum = -1, checksum = 33308, YYYYYYYYYYYYYYYYYYYY
+>>>>>> 发送分组103 <<<<<<
+【滑动窗口状态】base=102, nextseqnum=103, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组102 | 分组103]
+
+发送方发送报文: seqnum = 104, acknum = -1, checksum = 30737, ZZZZZZZZZZZZZZZZZZZZ
+>>>>>> 发送分组104 <<<<<<
+【滑动窗口状态】base=102, nextseqnum=104, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组102 | 分组103 | 分组104]
+
+发送方发送报文: seqnum = 105, acknum = -1, checksum = 29768, EOF                 
+>>>>>> 发送分组105 <<<<<<
+【滑动窗口状态】base=102, nextseqnum=105, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组102 | 分组103 | 分组104 | 分组105]
+
+接收方正确收到按序分组: seqnum = 102, acknum = -1, checksum = 35879, XXXXXXXXXXXXXXXXXXXX
+******模拟网络环境******：向上递交给应用层数据：XXXXXXXXXXXXXXXXXXXX
+接收方发送确认报文: seqnum = -1, acknum = 102, checksum = 12749, ....................
+接收方正确收到按序分组: seqnum = 103, acknum = -1, checksum = 33308, YYYYYYYYYYYYYYYYYYYY
+******模拟网络环境******：向上递交给应用层数据：YYYYYYYYYYYYYYYYYYYY
+接收方发送确认报文: seqnum = -1, acknum = 103, checksum = 12748, ....................
+>>收到ACK102，开始移动窗口<<
+移动前: base=102, 窗口大小=4
+【滑动窗口状态】base=102, nextseqnum=106, 窗口内分组数=4/8, 等待状态=否
+窗口内容: [分组102 | 分组103 | 分组104 | 分组105]
+发送方收到正确确认: seqnum = -1, acknum = 102, checksum = 12749, ....................
+移动后: base=103, 窗口大小=3
+【滑动窗口状态】base=103, nextseqnum=106, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组103 | 分组104 | 分组105]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 104, acknum = -1, checksum = 30737, ZZZZZZZZZZZZZZZZZZZZ
+******模拟网络环境******：向上递交给应用层数据：ZZZZZZZZZZZZZZZZZZZZ
+接收方发送确认报文: seqnum = -1, acknum = 104, checksum = 12747, ....................
+>>收到ACK103，开始移动窗口<<
+移动前: base=103, 窗口大小=3
+【滑动窗口状态】base=103, nextseqnum=106, 窗口内分组数=3/8, 等待状态=否
+窗口内容: [分组103 | 分组104 | 分组105]
+发送方收到正确确认: seqnum = -1, acknum = 103, checksum = 12748, ....................
+移动后: base=104, 窗口大小=2
+【滑动窗口状态】base=104, nextseqnum=106, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组104 | 分组105]
+>>窗口移动完成<<
+
+>>收到ACK104，开始移动窗口<<
+移动前: base=104, 窗口大小=2
+【滑动窗口状态】base=104, nextseqnum=106, 窗口内分组数=2/8, 等待状态=否
+窗口内容: [分组104 | 分组105]
+发送方收到正确确认: seqnum = -1, acknum = 104, checksum = 12747, ....................
+移动后: base=105, 窗口大小=1
+【滑动窗口状态】base=105, nextseqnum=106, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组105]
+>>窗口移动完成<<
+
+接收方正确收到按序分组: seqnum = 105, acknum = -1, checksum = 29768, EOF                 
+******模拟网络环境******：向上递交给应用层数据：EOF                  
+接收方发送确认报文: seqnum = -1, acknum = 105, checksum = 12746, ....................
+!!超时重传!!
+超时的分组: 105
+【滑动窗口状态】base=105, nextseqnum=106, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组105]
+超时重发: seqnum = 105, acknum = -1, checksum = 29768, EOF                 
+重传完成
+
+ERROR：接收方未收到正确报文：失序: seqnum = 105, acknum = -1, checksum = 29768, EOF                 
+接收方重发上次ack: seqnum = -1, acknum = 105, checksum = 12746, ....................
+>>收到ACK105，开始移动窗口<<
+移动前: base=105, 窗口大小=1
+【滑动窗口状态】base=105, nextseqnum=106, 窗口内分组数=1/8, 等待状态=否
+窗口内容: [分组105]
+发送方收到正确确认: seqnum = -1, acknum = 105, checksum = 12746, ....................
+移动后: base=106, 窗口大小=0
+【滑动窗口状态】base=106, nextseqnum=106, 窗口内分组数=0/8, 等待状态=否
+窗口内容: [空]
+>>窗口移动完成<<
+
+******模拟网络环境******：模拟网络环境已发送完应用层数据，关闭模拟网络环境
+已发送应用层Message个数: 105
+发送到网络层数据Packet个数: 204
+网络层丢失的数据Packet个数: 23
+网络层损坏的数据pakcet个数:20
+发送到网络层确认Packet个数:181
+网络层丢失的确认Packet个数: 14
+网络层损坏的确认Packet个数: 14
+
